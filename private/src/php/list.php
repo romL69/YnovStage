@@ -15,12 +15,10 @@ $teams = $connection->queryGetData("
         <title>
           Stage Campus Ynov - Lyon
         </title>
-        <?php
-        include 'index.css'
-        ?>
+
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="../../../public/master.css" />
         <!---<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 ---->
     </head>
@@ -65,11 +63,7 @@ $teams = $connection->queryGetData("
             <option>Node JS</option>
           </select>
         </div>
-<<<<<<< HEAD
-        <button type="submit" class="btn btn-submit">Submit</button>
-
-=======
-        <button type="submit" class="btn btn-primary mb-2"> Recherche </button>
+        <button type="submit" class="btn btn-submit">Recherche</button>
       </div>
 
       <div class="offer">
@@ -85,7 +79,6 @@ $teams = $connection->queryGetData("
          <div class="skills">
            Php ...
          </div>
->>>>>>> 460ac7253adcd62b9fe2e33d03b4237d9777f71d
       </div>
       <div class="">
 
