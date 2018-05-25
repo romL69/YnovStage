@@ -1,3 +1,13 @@
+<?php
+require_once 'func/connection.php';
+
+$teams = $connection->queryGetData("
+        SELECT title, type, class
+        FROM osi_offer;
+        ");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -46,6 +56,23 @@
             <option>Node JS</option>
           </select>
         </div>
+        <button type="submit" class="btn btn-submit">Submit</button>
+
       </div>
+      <div class="">
+
+
+      <?php
+            foreach ($teams as $team)
+            {
+            print '<tr class="table-line">
+                        <th class="table-case">'.$team["title"].'</th>
+                        <td class="table-case">'.$team["type"].'</td>
+                        <td class="table-case">'.$team["class"].'</td>
+                    </tr>'."\n";
+            }
+            print "\n";
+        ?>
+     </div>
     </body>
 </html>
