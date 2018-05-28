@@ -1,5 +1,4 @@
 <?php
-require_once 'func/connection.php';
 
 require_once 'func/connection.php';
 if (!isset($_GET['recherche']))
