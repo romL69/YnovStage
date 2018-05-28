@@ -1,7 +1,6 @@
 <?php
 require_once 'func/connection.php';
 
-require_once 'func/connection.php';
 if (!isset($_GET['recherche']))
 {
 $teams = $connection->queryGetData("
@@ -11,17 +10,14 @@ $teams = $connection->queryGetData("
     }
 if (isset($_GET['recherche']))
 {
-    var_dump($_POST['ingesup']);
-    var_dump($_POST['type']);
-    var_dump($_POST['field']);
-    var_dump($_POST['speciality']);
+
 
     $teams = $connection->queryGetData("
-            SELECT title, type, class
+            SELECT title, type, class, description
             FROM osi_offer
             WHERE type='".$_POST['type']."'"
             );
-            var_dump($teams);
+
 
 }
 ?>
@@ -92,31 +88,29 @@ if (isset($_GET['recherche']))
         </form>
 
 
-        <div class="offer">
-           <div class="title">
-             <h4>Titre de l'offre</h4>
-           </div>
-           <div class="classe">
-             B1 Ingésup
-           </div>
-           <div class="description">
-             Ce profil bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-           </div>
-           <div class="skills">
-             Php ...
-           </div>
-        </div>
+        
 
 
 
       <?php
             foreach ($teams as $team)
             {
-            print '<tr class="table-line">
-                        <th class="table-case">'.$team["title"].'</th>
-                        <td class="table-case">'.$team["type"].'</td>
-                        <td class="table-case">'.$team["class"].'</td>
-                    </tr>'."\n";
+                print '<div class="offer">
+                   <div class="title">
+                     <h4>'.$team["title"].'</h4>
+                   </div>
+                   '.$team["type"].'
+                   <div class="classe">
+                     '.$team["class"].'
+                   </div>
+                   <div class="description">
+                '.$team["description"].'
+                   </div>
+                   <div class="skills">
+                     Php ...
+                   </div>
+                </div>'
+            ;
             }
             print "\n";
         ?>
