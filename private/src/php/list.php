@@ -37,49 +37,51 @@ if (isset($_GET['recherche']))
     <body>
       <h1> Affinez votre recherche </h1>
       <h1> pour trouvez le profil qui vous intéresse </h1>
-      
-      <form class="form" action="?recherche" method="POST">
-        <h3> Sélectionnez vos critères de recherche </h3>
-        <div class="form">
-          <label for="form-check"> Année </label>
-          <select id="inputThem" class="form-control" name="class">
-            <option selected>B1 Ingesup</option>
-            <option>B2 Ingesup</option>
 
-          </select>
-        </div>
-        <div class="form-group col-md-4">
-          <label for="inputThem">Type</label>
-          <select id="inputThem" class="form-control" name="type">
-            <option selected>Stage</option>
-            <option>Alternance</option>
+      <div class="form">
+        <form class="formulaire" action="?recherche" method="POST">
+          <h3> Sélectionnez vos critères de recherche </h3>
+          <div class="form_class">
+            <label for="inputThem"> Année </label>
+            <select id="inputThem" class="form_class" name="class">
+              <option selected>B1 Ingesup</option>
+              <option>B2 Ingesup</option>
 
-          </select>
-        </div>
-        <div class="form-group col-md-4">
-          <label for="inputThem">Thématique</label>
-          <select id="inputThem" class="form-control" name="field">
-            <option selected>Développement Web</option>
-            <option>Développement logiciel</option>
-            <option>Développement mobile</option>
-            <option>Infrastructure et SI</option>
-            <option>Base de données</option>
-            <option>Cyber-sécurité</option>
-          </select>
-        </div>
-        <div class="form-group col-md-4">
-          <label for="inputSkill">Spécialité</label>
-          <select id="inputSkill" class="form-control" name="speciality">
-            <option selected> PHP </option>
-            <option>HTML/CSS</option>
-            <option>Java</option>
-            <option>Symfony</option>
-            <option>Angular</option>
-            <option>Node JS</option>
-          </select>
-        </div>
-        <button type="submit" class="btn btn-submit">Recherche</button>
+            </select>
+          </div>
+          <div class="form_type">
+            <label for="inputType">Type</label>
+            <select id="inputType" class="form_type" name="type">
+              <option selected>Stage</option>
+              <option>Alternance</option>
+
+            </select>
+          </div>
+          <div class="form_them">
+            <label for="inputThem">Thématique</label>
+            <select id="inputThem" class="form_tem" name="field">
+              <option selected>Développement Web</option>
+              <option>Développement logiciel</option>
+              <option>Développement mobile</option>
+              <option>Infrastructure et SI</option>
+              <option>Base de données</option>
+              <option>Cyber-sécurité</option>
+            </select>
+          </div>
+          <div class="form_skill">
+            <label for="inputSkill">Spécialité</label>
+            <select id="inputSkill" class="form_skill" name="speciality">
+              <option selected> PHP </option>
+              <option>HTML/CSS</option>
+              <option>Java</option>
+              <option>Symfony</option>
+              <option>Angular</option>
+              <option>Node JS</option>
+            </select>
+          </div>
+          <button type="submit" class="form_submit">Recherche</button>
         </form>
+      </div>
 
 
 

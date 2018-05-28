@@ -1,30 +1,47 @@
 *
 {
   padding : 0;
-  margin : 0;
-  background-color: lightgreen;
+  margin: 0;
+  /*background-color: lightgreen;*/
   font-family: "Montserrat";
+  text-align: center;
 }
 
 h1{
   text-align: center;
 }
 
-.form{
+form{
+  padding: 10px;
+  margin: 2em auto 3em;
   background-color: #23b2a4;
   border-radius: 10px;
-  align-content: space-around;
-  display: block;
+  display: flex;
   width: 428px;
   height: 200px;
   box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.form_them, .form_type, .form_class, .form_class{
+  padding: 10px;
+}
+.form_submit{
+  margin: 5px 50px 5px 20px;
 }
 
 .offer{
-  border-color: #23b2a4;
+  padding: 10px;
+  margin: 2em auto 3em;
+  border: 2px solid #23b2a4 ;
   border-radius: 10px;
   width: 428px;
-  height: 200px;
+  height: 230px;
   box-sizing: border-box;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title, .type, .classe, .description, .skills{
+  padding: 10px;
 }

@@ -6,7 +6,7 @@
         <title>Détails de l'offre</title>
     </head>
     <body>
-      <div class="offer">
+      <div class="offer_details">
          <div class="title">
            <h4>Titre de l'offre</h4>
          </div>
