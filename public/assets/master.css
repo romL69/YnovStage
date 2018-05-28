@@ -14,4 +14,17 @@ h1{
   background-color: #23b2a4;
   border-radius: 10px;
   align-content: space-around;
+  display: block;
+  width: 428px;
+  height: 200px;
+  box-sizing: border-box;
+}
+
+.offer{
+  border-color: #23b2a4;
+  border-radius: 10px;
+  width: 428px;
+  height: 200px;
+  box-sizing: border-box;
+  display: block;
 }

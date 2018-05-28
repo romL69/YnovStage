@@ -36,7 +36,8 @@ if (isset($_GET['recherche']))
 
     <body>
       <h1> Affinez votre recherche </h1>
-      <h1> pour trouvez le profil qui vous correspond </h1>
+      <h1> pour trouvez le profil qui vous intéresse </h1>
+      
       <form class="form" action="?recherche" method="POST">
         <h3> Sélectionnez vos critères de recherche </h3>
         <div class="form">
