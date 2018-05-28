@@ -1,5 +1,5 @@
 <?php
-
+require_once 'func/connection.php';
 if (!isset($_GET['recherche']))
 {
 $teams = $connection->queryGetData("
@@ -87,7 +87,7 @@ if (isset($_GET['recherche']))
         </form>
 
 
-        
+
 
 
 
