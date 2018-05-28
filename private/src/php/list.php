@@ -3,7 +3,7 @@ require_once 'func/connection.php';
 if (!isset($_GET['recherche']))
 {
 $teams = $connection->queryGetData("
-        SELECT title, type, class
+        SELECT title, type, class, description
         FROM osi_offer;
         ");
     }
@@ -40,7 +40,7 @@ if (isset($_GET['recherche']))
       <h1> pour trouvez le profil qui vous correspond </h1>
       <form class="form" action="?recherche" method="POST">
         <h3> Sélectionnez vos critères de recherche </h3>
-        <div class="form-check">
+        <div class="form">
           <label for="form-check"> Année </label>
           <div id="years">
             <input class="form-check-input" type="checkbox" name="ingesup[] "value="B1 Ingesup" id="selectClass1">
