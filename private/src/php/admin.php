@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Connexion admin</title>
-    <link rel="stylesheet" href="/YnovStage/public/master.css" >
+    <link rel="stylesheet" href="/assets/master.css" >
   </head>
   <body>
-    
+
   </body>
 </html>

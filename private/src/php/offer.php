@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="/YnovStage/public/master.css" >
+        <link rel="stylesheet" href="/assets/master.css" >
         <title>Détails de l'offre</title>
     </head>
     <body>

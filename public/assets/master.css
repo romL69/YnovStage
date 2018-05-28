@@ -2,9 +2,7 @@
 {
   padding : 0;
   margin : 0;
-<<<<<<< HEAD
-=======
->>>>>>> 7dcd79602cbe038c629e0e614a6609172a540d41
+  background-color: lightgreen;
   font-family: "Montserrat";
 }
 
@@ -12,8 +10,21 @@ h1{
   text-align: center;
 }
 
-#form{
+.form{
   background-color: #23b2a4;
   border-radius: 10px;
   align-content: space-around;
+  display: block;
+  width: 428px;
+  height: 200px;
+  box-sizing: border-box;
+}
+
+.offer{
+  border-color: #23b2a4;
+  border-radius: 10px;
+  width: 428px;
+  height: 200px;
+  box-sizing: border-box;
+  display: block;
 }
