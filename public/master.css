@@ -1,6 +1,8 @@
-*{
+*
+{
   padding : 0;
   margin : 0;
+  background-color: blue;
 }
 
 h1{
@@ -17,19 +19,17 @@ h1{
 .form-check{
 position:absolute;
 margin-top:.3rem;
-<<<<<<< HEAD
 margin-left:-1.25rem;
 }
 .form-check-input:disabled~
 .form-check-label{
 color:#6c757d;
 margin-bottom:0;
-=======
 margin-left:-1.25rem
 }
+
 .form-check-input:disabled~
 .form-check-label{
-color:#6c757d
-margin-bottom:0
->>>>>>> aff515896a56ada32e0fdd9a91d83c54b94430fc
+color:#6c757d;
+margin-bottom:0;
 }

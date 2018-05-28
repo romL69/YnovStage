@@ -1,11 +1,28 @@
 <?php
-require_once 'func/connection.php';
 
+require_once 'func/connection.php';
+if (!isset($_GET['recherche']))
+{
 $teams = $connection->queryGetData("
         SELECT title, type, class
         FROM osi_offer;
         ");
+    }
+if (isset($_GET['recherche']))
+{
+    var_dump($_POST['ingesup']);
+    var_dump($_POST['type']);
+    var_dump($_POST['field']);
+    var_dump($_POST['speciality']);
 
+    $teams = $connection->queryGetData("
+            SELECT title, type, class
+            FROM osi_offer
+            WHERE type='".$_POST['type']."'"
+            );
+            var_dump($teams);
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -15,38 +32,42 @@ $teams = $connection->queryGetData("
         <title>
           Stage Campus Ynov - Lyon
         </title>
-        <?php
-        include 'index.css'
-        ?>
-
-
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <link rel="stylesheet" href="../../../public/master.css" />
+
+        <link rel="stylesheet" href="/YnovStage/public/master.css" >
         <!---<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 ---->
     </head>
-    <?php ?>
+
     <body>
       <h1> Affinez votre recherche </h1>
       <h1> pour trouvez le profil qui vous correspond </h1>
-      <div id= "form">
+      <form class="form" action="?recherche" method="POST">
         <h3> Sélectionnez vos critères de recherche </h3>
         <div class="form-check">
           <label for="form-check"> Année </label>
           <div id="years">
-            <input class="form-check-input" type="checkbox" value="" id="selectClass1">
+            <input class="form-check-input" type="checkbox" name="ingesup[] "value="B1 Ingesup" id="selectClass1">
             <label class="form-check-label" for="selectClass1">
               Bachelor 1
             </label>
-            <input class="form-check-input" type="checkbox" value="" id="selectClass2">
+            <input class="form-check-input" type="checkbox" name="ingesup[] "value="B2" id="selectClass2">
             <label class="form-check-label" for="selectClass2">
               Bachelor 2
             </label>
           </div>
         </div>
         <div class="form-group col-md-4">
+          <label for="inputThem">Type</label>
+          <select id="inputThem" class="form-control" name="type">
+            <option selected>Stage</option>
+            <option>Alternance</option>
+
+          </select>
+        </div>
+        <div class="form-group col-md-4">
           <label for="inputThem">Thématique</label>
-          <select id="inputThem" class="form-control">
+          <select id="inputThem" class="form-control" name="field">
             <option selected>Développement Web</option>
             <option>Développement logiciel</option>
             <option>Développement mobile</option>
@@ -57,7 +78,7 @@ $teams = $connection->queryGetData("
         </div>
         <div class="form-group col-md-4">
           <label for="inputSkill">Spécialité</label>
-          <select id="inputSkill" class="form-control">
+          <select id="inputSkill" class="form-control" name="speciality">
             <option selected> PHP </option>
             <option>HTML/CSS</option>
             <option>Java</option>
@@ -67,8 +88,7 @@ $teams = $connection->queryGetData("
           </select>
         </div>
         <button type="submit" class="btn btn-submit">Recherche</button>
-      </div>
-
+        </form>
       <div class="offer">
          <div class="title">
            <h4>Titre de l'offre</h4>
