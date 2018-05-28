@@ -10,11 +10,10 @@ $teams = $connection->queryGetData("
 if (isset($_GET['recherche']))
 {
 
-
     $teams = $connection->queryGetData("
             SELECT title, type, class, description
             FROM osi_offer
-            WHERE type='".$_POST['type']."'"
+            WHERE type='".$_POST['type']."' AND class='".$_POST['class']."'"
             );
 
 
@@ -42,16 +41,11 @@ if (isset($_GET['recherche']))
         <h3> Sélectionnez vos critères de recherche </h3>
         <div class="form">
           <label for="form-check"> Année </label>
-          <div id="years">
-            <input class="form-check-input" type="checkbox" name="ingesup[] "value="B1 Ingesup" id="selectClass1">
-            <label class="form-check-label" for="selectClass1">
-              Bachelor 1
-            </label>
-            <input class="form-check-input" type="checkbox" name="ingesup[] "value="B2" id="selectClass2">
-            <label class="form-check-label" for="selectClass2">
-              Bachelor 2
-            </label>
-          </div>
+          <select id="inputThem" class="form-control" name="class">
+            <option selected>B1 Ingesup</option>
+            <option>B2 Ingesup</option>
+
+          </select>
         </div>
         <div class="form-group col-md-4">
           <label for="inputThem">Type</label>
