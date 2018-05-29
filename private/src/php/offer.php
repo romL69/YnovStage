@@ -1,4 +1,4 @@
-<?php 
+<?php
 //SWIFT MAILER
 require_once '../../../vendor/autoload.php';
 // Create the Transport
@@ -9,14 +9,13 @@ $transport = (new Swift_SmtpTransport('smtp.example.org', 25))
 // Create the Mailer using your created Transport
 $mailer = new Swift_Mailer($transport);
 // Create a message
-$message = (new Swift_Message('Wonderful Subject'))
+$message = (new Swift_Message('Renseignements à propos d\'un profil'))
   ->setFrom(['john@doe.com' => 'John Doe'])
   ->setTo(['romain.loire@ynov.com' => 'Romain Loire'])
   ->setBody('Je suis un ananas')
   ;
 // Send the message
 $result = $mailer->send($message);
-
 ?>
 
 
