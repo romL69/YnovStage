@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="master.css" >
+        <link rel="stylesheet" href="/assets/master.css" >
         <title>Détails de l'offre</title>
     </head>
     <body>
@@ -24,7 +24,7 @@
       <div class="contact">
             <div class="form_fields">
               <legend class="title_contact">Nous contacter à propos de ce profil</legend>
-              <!----------<input type="hidden" name="frm_action" value="create" />
+              <!---<input type="hidden" name="frm_action" value="create" />
               <input type="hidden" name="form_id" value="2" />
               <input type="hidden" name="frm_hide_fields_2" id="frm_hide_fields_2" value="" />
               <input type="hidden" name="form_key" value="contact-form" />
