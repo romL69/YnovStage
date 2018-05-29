@@ -114,6 +114,7 @@ var_dump($_POST['theme']);
                    <div class="skills">
                      Php ...
                    </div>
+                   <button type="button" class="bouton_info">Infos +</button>
                 </div>'
             ;
             }

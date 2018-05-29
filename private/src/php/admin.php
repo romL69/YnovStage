@@ -1,4 +1,12 @@
 <?php
+
+//parsedown pour les markdown
+$Parsedown = new Parsedown();
+echo $Parsedown->text('Hello _Parsedown_!'); # prints: <p>Hello <em>Parsedown</em>!</p>
+// you can also parse inline markdown only
+echo $Parsedown->line('Hello _Parsedown_!'); # prints: Hello <em>Parsedown</em>!
+
+//bails de Romain
 require_once 'func/connection.php';
 $themes = $connection->queryGetData("
         SELECT title
@@ -17,9 +25,12 @@ if (isset($_GET['createOffer']))
             VALUES
             ('$title','$class', '$type', '$theme','$description');
             ");
-
 }
+
  ?>
+
+
+
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
