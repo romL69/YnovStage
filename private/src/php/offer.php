@@ -24,7 +24,7 @@
       <div class="contact">
             <div class="form_fields">
               <legend class="title_contact">Nous contacter à propos de ce profil</legend>
-              <!----------<input type="hidden" name="frm_action" value="create" />
+              <!---<input type="hidden" name="frm_action" value="create" />
               <input type="hidden" name="form_id" value="2" />
               <input type="hidden" name="frm_hide_fields_2" id="frm_hide_fields_2" value="" />
               <input type="hidden" name="form_key" value="contact-form" />
