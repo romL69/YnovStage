@@ -18,7 +18,7 @@ form{
   border-radius: 10px;
   display: flex;
   width: 428px;
-  height: 200px;
+  height: auto;
   box-sizing: border-box;
   flex-wrap: wrap;
 }
@@ -36,7 +36,7 @@ form{
   border: 2px solid #23b2a4 ;
   border-radius: 10px;
   width: 428px;
-  height: 230px;
+  height: auto;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
