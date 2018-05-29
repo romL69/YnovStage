@@ -9,11 +9,11 @@ $teams = $connection->queryGetData("
     }
 if (isset($_GET['recherche']))
 {
-
+var_dump($_POST['theme']);
     $teams = $connection->queryGetData("
-            SELECT title, type, class, description
+            SELECT title, type, class, description, theme
             FROM osi_offer
-            WHERE type='".$_POST['type']."' AND class='".$_POST['class']."'"
+            WHERE type='".$_POST['type']."' AND class='".$_POST['class']."' AND theme='".$_POST['theme']."'"
             );
 
 
@@ -59,8 +59,8 @@ if (isset($_GET['recherche']))
           </div>
           <div class="form_them">
             <label for="inputThem">Thématique</label>
-            <select id="inputThem" class="form_tem" name="field">
-              <option selected>Développement Web</option>
+            <select id="inputThem" class="form_tem" name="theme">
+              <option selected>Developpement web</option>
               <option>Développement logiciel</option>
               <option>Développement mobile</option>
               <option>Infrastructure et SI</option>
@@ -100,7 +100,7 @@ if (isset($_GET['recherche']))
                      '.$team["class"].'
                    </div>
                    <div class="description">
-                '.$team["description"].'
+                       '.$team["description"].'
                    </div>
                    <div class="skills">
                      Php ...

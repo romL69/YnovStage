@@ -8,7 +8,14 @@ if(strstr($_SERVER["REQUEST_URI"], "/stage") || strstr($_SERVER["REQUEST_URI"], 
   {
 require_once '..\private\src\php\list.php';
 }
-require_once '..\private\src\php\list.php';
+if(strstr($_SERVER["REQUEST_URI"], "/setDB") )
+  {
+require '..\private\src\php\func\setDB.php';
+}
+if(strstr($_SERVER["REQUEST_URI"], "/admin") )
+  {
+require '..\private\src\php\admin.php';
+}
 /*
 <?php
 // Grabs the URI and breaks it apart in case we have querystring stuff
