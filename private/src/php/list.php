@@ -42,8 +42,8 @@ var_dump($_POST['theme']);
         <form class="formulaire" action="?recherche" method="POST">
           <h3> Sélectionnez vos critères de recherche </h3>
           <div class="form_class">
-            <label for="inputThem"> Année </label>
-            <select id="inputThem" class="form_class" name="class">
+            <label for="inputClass"> Année </label>
+            <select id="inputClass" class="form_class" name="class">
               <option selected>B1 Ingesup</option>
               <option>B2 Ingesup</option>
 
