@@ -1,5 +1,13 @@
 <?php
 require_once 'func/connection.php';
+$themes = $connection->queryGetData("
+        SELECT title
+        FROM osi_theme;
+        ");
+$skills= $connection->queryGetData("
+SELECT title
+FROM osi_skill
+");
 if (!isset($_GET['recherche']))
 {
 $teams = $connection->queryGetData("
@@ -60,29 +68,30 @@ var_dump($_POST['theme']);
           <div class="form_them">
             <label for="inputThem">Thématique</label>
             <select id="inputThem" class="form_tem" name="theme">
-              <option selected>Developpement web</option>
-              <option>Développement logiciel</option>
-              <option>Développement mobile</option>
-              <option>Infrastructure et SI</option>
-              <option>Base de données</option>
-              <option>Cyber-sécurité</option>
+
+              <?php
+                foreach ($themes as $theme)
+            {
+                print '<option value="' . $theme['title'].'">' . $theme['title'] . '</option>' . "\n                                ";
+                    }
+                print "\n";
+                ?>
             </select>
           </div>
           <div class="form_skill">
             <label for="inputSkill">Spécialité</label>
             <select id="inputSkill" class="form_skill" name="speciality">
-              <option selected> PHP </option>
-              <option>HTML/CSS</option>
-              <option>Java</option>
-              <option>Symfony</option>
-              <option>Angular</option>
-              <option>Node JS</option>
+                <?php
+                    foreach($skills as $skill)
+                    {
+                        print'<input type="checkbox" name="skills[]" value="'.$skill['title'].'"/>'.$skill['title'].'<br>';
+                    }
+                 ?>
             </select>
           </div>
           <button type="submit" class="form_submit">Recherche</button>
         </form>
       </div>
-
 
 
 

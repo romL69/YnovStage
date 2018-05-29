@@ -16,6 +16,14 @@ if(strstr($_SERVER["REQUEST_URI"], "/admin") )
   {
 require '..\private\src\php\admin.php';
 }
+if(strstr($_SERVER["REQUEST_URI"], "/specialities") )
+  {
+require '..\private\src\php\specialities.php';
+}
+if(strstr($_SERVER["REQUEST_URI"], "/offer") )
+  {
+require '..\private\src\php\offer.php';
+}
 /*
 <?php
 // Grabs the URI and breaks it apart in case we have querystring stuff

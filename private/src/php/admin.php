@@ -1,6 +1,9 @@
 <?php
 require_once 'func/connection.php';
-
+$themes = $connection->queryGetData("
+        SELECT title
+        FROM osi_theme;
+        ");
 if (isset($_GET['createOffer']))
 {
     $class = $_POST['class'];
@@ -25,6 +28,7 @@ if (isset($_GET['createOffer']))
     <link rel="stylesheet" href="/assets/master.css" >
   </head>
   <body>
+      <a href="specialities.php"> Créer des themes<input type="button"></a>
       <form class="" action="?createOffer" method="post">
           <div class="form-div1 form-div2">
                     <label class="form-label">Titre de l'offre</label>
@@ -49,12 +53,13 @@ if (isset($_GET['createOffer']))
           <div class="form_type">
             <label for="inputType">Thématique</label>
             <select id="inputType" class="form_type" name="theme">
-                <option selected>Developpement web</option>
-                <option>Développement logiciel</option>
-                <option>Développement mobile</option>
-                <option>Infrastructure et SI</option>
-                <option>Base de données</option>
-                <option>Cyber-sécurité</option>
+                <?php
+                  foreach ($themes as $theme)
+              {
+                  print '<option value="' . $theme['title'].'">' . $theme['title'] . '</option>' . "\n                                ";
+                      }
+                  print "\n";
+                  ?>
 
             </select>
           </div>
