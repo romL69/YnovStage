@@ -1,12 +1,20 @@
 <?php
+<<<<<<< HEAD
 
 //parsedown pour les markdown
 //$Parsedown = new Parsedown();
 //echo $Parsedown->text('Hello _Parsedown_!'); # prints: <p>Hello <em>Parsedown</em>!</p>
 // you can also parse inline markdown only
 //echo $Parsedown->line('Hello _Parsedown_!'); # prints: Hello <em>Parsedown</em>!
+=======
+/*
+//parsedown pour les markdown (DONE)
+$to_show = $_GET['description'];
+$Parsedown = new Parsedown();
+echo $Parsedown->text($to_show);
+*/
+>>>>>>> 79b70ccf99b70a62c0d5e550a660650d8b9dac72
 
-//bails de Romain
 require_once 'func/connection.php';
 $themes = $connection->queryGetData("
         SELECT title
@@ -26,10 +34,7 @@ if (isset($_GET['createOffer']))
             ('$title','$class', '$type', '$theme','$description');
             ");
 }
-
  ?>
-
-
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
