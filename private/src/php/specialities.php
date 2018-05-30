@@ -21,28 +21,28 @@ if (isset($_GET['createSpeciality']))
     ");
 }
      ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
         <title></title>
     </head>
+
     <body>
-        <form class="" action="?createTheme" method="post">
-            <div class="form-div1 form-div2">
-                      <label class="form-label">Créer un theme</label>
-                      <input type="text" name="theme" class="input"/>
-                  </div>
-                  <button type="submit" class="form_submit">Recherche</button>
-
+        <form class="create_them" action="?createTheme" method="post">
+            <div class="create_them_text">
+                <label for="theme">Créer un theme</label>
+                <input type="text" name="theme" class="input"/>
+            </div>
+            <button type="submit" class="form_submit">Créer</button>
         </form>
-        <form class="" action="?createSpeciality" method="post">
-            <div class="form-div1 form-div2">
-                      <label class="form-label">Créer une spécialité</label>
-                      <input type="text" name="speciality" class="input"/>
-                  </div>
-                  <button type="submit" class="form_submit">Créer une spécialité</button>
-
+        <form class="create_skill" action="?createSpeciality" method="post">
+            <div class="create_skill_text">
+                <label for="speciality">Créer une spécialité</label>
+                <input type="text" name="speciality" class="input"/>
+            </div>
+            <button type="submit" class="form_submit">Créer</button>
         </form>
     </body>
 </html>
