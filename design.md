@@ -9,9 +9,9 @@ Page Liste des offres
 ---------------------
 Cette page se divise en deux parties. On y trouve premièrement le __formulaire__ qui permet d'affiner la rechercher et deuxièmement la __liste des offres__ correspondant aux critères plus haut. Initialement, cette page affiche un formulaire de recherche vierge et toutes les offres disponibles à ce jour.
 
-Le formulaire doit permettre de chercher selon le _type d'offre_ (stage, alternance, CDD, CDI), l'école/domaine (Ingesup, ISEE, IMART, Audiovisuel et Jeux vidéo), l'intitulé (genre "Développement Web) et la spécialité (php, html...). En appuyant sur le bouton "Rechercher", on lance le tri des offres en dessous.
+Le formulaire doit permettre de chercher selon le __type d'offre__ (stage, alternance, CDD, CDI), l'__école__/domaine (Ingesup, ISEE, IMART, Audiovisuel et Jeux vidéo), l'__intitulé__ (genre "Développement Web) et la __spécialité__ (php, html...). En appuyant sur le bouton "Rechercher", on lance le tri des offres en dessous.
 
-Les aperçus d'offres sont 
+Les aperçus d'offres sont clairs et concis et résument simplement le titre de l'offre, 
 
 
 

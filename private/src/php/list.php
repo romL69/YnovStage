@@ -159,7 +159,9 @@ if (isset($_GET['recherche']))
                    <div class="title">
                      <h4>'.$team["title"].'</h4>
                    </div>
+                   <div class="type">
                      '.$team["type"].'
+                   </div>
                    <div class="classe">
                      '.$team["class"].'
                    </div>
