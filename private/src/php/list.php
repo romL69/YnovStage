@@ -5,9 +5,9 @@ $themes = $connection->queryGetData("
         FROM osi_theme;
         ");
 $skills= $connection->queryGetData("
-SELECT title
-FROM osi_skill
-");
+        SELECT title,id
+        FROM osi_skill
+        ");
 if (!isset($_GET['recherche']))
 {
 $teams = $connection->queryGetData("
@@ -17,15 +17,33 @@ $teams = $connection->queryGetData("
     }
 if (isset($_GET['recherche']))
 {
-var_dump($_POST['theme']);
-    $teams = $connection->queryGetData("
-            SELECT title, type, class, description, theme
-            FROM osi_offer
-            WHERE type='".$_POST['type']."' AND class='".$_POST['class']."' AND theme='".$_POST['theme']."'"
-            );
+    if ($_POST['type']==='') {
+        $_POST['type']=null;
+    }
+    if ($_POST['class']==='') {
+        $_POST['class']=null;
+    }
+    if ($_POST['theme']==='') {
+        $_POST['theme']=null;
+    }
+    $sql = "
+        SELECT title, type, class, description, theme
+        FROM osi_offer
+        WHERE 1 = 1
+    ";
 
-
+    if (isset($_POST['type'])) {
+        $sql .= "AND type ='".$_POST['type']."'";
+    }
+    if (isset($_POST['class'])) {
+        $sql .= "AND class ='".$_POST['class']."'";
+    }
+    if (isset($_POST['theme'])) {
+        $sql .= "AND theme ='".$_POST['theme']."'";
+    }
+    $teams = $connection->queryGetData($sql);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +70,8 @@ var_dump($_POST['theme']);
           <div class="form_class">
             <label for="inputClass"> Année </label>
             <select id="inputClass" class="form_class" name="class">
-              <option selected>B1 Ingesup</option>
+              <option value=""></option>
+              <option>B1 Ingesup</option>
               <option>B2 Ingesup</option>
 
             </select>
@@ -60,7 +79,8 @@ var_dump($_POST['theme']);
           <div class="form_type">
             <label for="inputType">Type</label>
             <select id="inputType" class="form_type" name="type">
-              <option selected>Stage</option>
+              <option value=""></option>
+              <option>Stage</option>
               <option>Alternance</option>
 
             </select>
@@ -68,7 +88,7 @@ var_dump($_POST['theme']);
           <div class="form_them">
             <label for="inputThem">Thématique</label>
             <select id="inputThem" class="form_tem" name="theme">
-
+                <option value=""></option>
               <?php
                 foreach ($themes as $theme)
             {
@@ -80,11 +100,13 @@ var_dump($_POST['theme']);
           </div>
           <div class="form_skill">
             <label for="inputSkill">Spécialité</label>
-            <select id="inputSkill" class="form_skill" name="speciality">
+            <select id="inputSkill" class="form_skill" name="skills">
+                <option value=""></option>
                 <?php
                     foreach($skills as $skill)
                     {
-                        print'<input type="checkbox" name="skills[]" value="'.$skill['title'].'"/>'.$skill['title'].'<br>';
+
+                        print'<option value="'.$skill['id'].'"/>'.$skill['title'].'</option>' . "\n";
                     }
                  ?>
             </select>
