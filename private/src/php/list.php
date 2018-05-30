@@ -69,6 +69,17 @@ if (isset($_GET['recherche']))
       <div class="form">
         <form class="formulaire" action="?recherche" method="POST">
           <h3> Sélectionnez vos critères de recherche </h3>
+<<<<<<< HEAD
+          <div class="form_type">
+            <label for="inputType">Type</label>
+            <select id="inputType" class="form_type" name="type">
+              <option value=""></option>
+              <option>Stage</option>
+              <option>Alternance</option>
+
+            </select>
+          </div>
+=======
             <div class="form_type">
                 <label for="inputType">Type</label>
                 <select id="inputType" class="form_type" name="type">
@@ -114,6 +125,7 @@ if (isset($_GET['recherche']))
               </div>
               <button type="submit" class="form_submit">Recherche</button>
 
+>>>>>>> 79b70ccf99b70a62c0d5e550a660650d8b9dac72
           <div class="form_class">
             <label for="inputClass"> Ecole </label>
             <select id="inputClass" class="form_class" name="class">
@@ -123,15 +135,7 @@ if (isset($_GET['recherche']))
 
             </select>
           </div>
-          <div class="form_type">
-            <label for="inputType">Type</label>
-            <select id="inputType" class="form_type" name="type">
-              <option value=""></option>
-              <option>Stage</option>
-              <option>Alternance</option>
 
-            </select>
-          </div>
           <div class="form_them">
             <label for="inputThem">Thématique</label>
             <select id="inputThem" class="form_tem" name="theme">
@@ -167,6 +171,7 @@ if (isset($_GET['recherche']))
 
       <!---- Typical offer --->
       <?php
+    
             foreach ($teams as $team)
             {
                 print '<div class="offer">

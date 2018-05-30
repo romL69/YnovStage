@@ -1,10 +1,19 @@
 <?php
+<<<<<<< HEAD
+
+//parsedown pour les markdown
+//$Parsedown = new Parsedown();
+//echo $Parsedown->text('Hello _Parsedown_!'); # prints: <p>Hello <em>Parsedown</em>!</p>
+// you can also parse inline markdown only
+//echo $Parsedown->line('Hello _Parsedown_!'); # prints: Hello <em>Parsedown</em>!
+=======
 /*
 //parsedown pour les markdown (DONE)
 $to_show = $_GET['description'];
 $Parsedown = new Parsedown();
 echo $Parsedown->text($to_show);
 */
+>>>>>>> 79b70ccf99b70a62c0d5e550a660650d8b9dac72
 
 require_once 'func/connection.php';
 $themes = $connection->queryGetData("
@@ -84,7 +93,7 @@ if (isset($_GET['createOffer']))
           </div>
           <div class="form-div1 form-div2">
                     <label class="form-label">Description</label>
-                    <input type="text" name="description" class="input"/>
+                    <textarea name="description" class="input"/></textarea>
                 </div>
           <button type="submit" class="form_submit">CREER UNE OFFRE</button>
 
