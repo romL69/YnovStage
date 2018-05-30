@@ -65,6 +65,7 @@ if (isset($_GET['recherche']))
     <body>
       <h1> Affinez votre recherche <br> pour trouvez le profil qui vous intéresse </h1>
 
+      <!---- formulaire de recherche --->
       <div class="form">
         <form class="formulaire" action="?recherche" method="POST">
           <h3> Sélectionnez vos critères de recherche </h3>
@@ -164,7 +165,7 @@ if (isset($_GET['recherche']))
 
 
 
-
+      <!---- Typical offer --->
       <?php
             foreach ($teams as $team)
             {
@@ -182,12 +183,14 @@ if (isset($_GET['recherche']))
                    <div class="skills">
                      Php ...
                    </div>
-                   <a href="offer.php?'.$team["id"].'"> Plus d\'infos </a>
+                   <a class="infos" href="offer.php?'.$team["id"].'"> Plus d\'infos </a>
+                   
                 </div>'
             ;
             }
             print "\n";
         ?>
+
 
      </div>
     </body>
