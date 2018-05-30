@@ -74,7 +74,8 @@ $offre=$connection->queryGetData("
                 <td>
                   <div class="description">
                       <?php
-                      print $offre[0]["description"];
+                      $Parsedown = new Parsedown();
+                      print $Parsedown->text($offre[0]["description"]);
                        ?>                  </div>
                 </td>
               </tr>

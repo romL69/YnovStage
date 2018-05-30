@@ -65,47 +65,54 @@ if (isset($_GET['recherche']))
     <body>
       <h1> Affinez votre recherche <br> pour trouvez le profil qui vous intéresse </h1>
 
+      <!-- formulaire de recherche --->
       <div class="form">
         <form class="formulaire" action="?recherche" method="POST">
+          <h3> Sélectionnez vos critères de recherche </h3>
 
+            <div class="form_type">
+                <label for="inputType">Type</label>
+                <select id="inputType" class="form_type" name="type">
+                    <option value=""></option>
+                    <option>Stage</option>
+                    <option>Alternance</option>
+                    <option> CDD </option>
+                    <option> CDI </option>
+                </select>
+            </div>
 
-          <div class="form_class">
-              <div class="form_type">
-                  <label for="inputType">Type</label>
-                  <select id="inputType" class="form_type" name="type">
-                      <option value=""></option>
-                      <option >Stage</option>
-                      <option>Alternance</option>
-                      <option> CDD </option>
-                      <option> CDI </option>
-                  </select>
-              </div>
-            <label for="inputClass"> Ecole </label>
-            <select id="inputClass" class="form_class" name="class">
-              <option value=""></option>
-              <option>B1 Ingesup</option>
-              <option>B2 Ingesup</option>
+            <div class="form_class">
+                <label for="inputClass"> Ecole </label>
+                <select id="inputClass" class="form_class" name="class">
+                    <option value=""></option>
+                    <option >Ingesup</option>
+                    <option>Digital Business School</option>
+                    <option> Animation 3D / Jeux vidéo </option>
+                    <option> Web, com & graphic design</option>
+                    <option> Audiovisuel </option>
+                </select>
+            </div>
 
-            </select>
-          </div>
+            <div class="form_them">
+                <label for="inputThem"> Intitulé </label>
+                <select id="inputThem" class="form_tem" name="theme">
+                    <option value=""></option>
 
-          <div class="form_them">
-            <label for="inputThem">Thématique</label>
-            <select id="inputThem" class="form_tem" name="theme">
-                <option value=""></option>
-              <?php
-                foreach ($themes as $theme)
-            {
-                print '<option value="' . $theme['title'].'">' . $theme['title'] . '</option>' . "\n                                ";
-                    }
-                print "\n";
-                ?>
-            </select>
-          </div>
-          <div class="form_skill">
-            <label for="inputSkill">Spécialité</label>
-            <select id="inputSkill" class="form_skill" name="skill">
-                <option value=""></option>
+                  <?php
+
+                    foreach ($themes as $theme)
+                {
+                    print '<option value="' . $theme['title'].'">' . $theme['title'] . '</option>' . "\n                                ";
+                        }
+                    print "\n";
+                    ?>
+                </select>
+            </div>
+
+             <div class="form_skill">
+                 <label for="inputSkill">Spécialité</label>
+                 <select id="inputSkill" class="form_skill" name="skill">
+                     <option value=""></option>
                 <?php
                     foreach($skills as $skill)
                     {
@@ -113,17 +120,19 @@ if (isset($_GET['recherche']))
                         print'<option value="'.$skill['id'].'"/>'.$skill['title'].'</option>' . "\n";
                     }
                  ?>
-            </select>
-          </div>
-          <button type="submit" class="form_submit">Recherche</button>
+                 </select>
+             </div>
+            <button type="submit" class="form_submit">Recherche</button>
         </form>
       </div>
 
 
 
 
-
+      <!-- Typical offer --->
       <?php
+
+
 
             foreach ($teams as $team)
             {
@@ -141,12 +150,14 @@ if (isset($_GET['recherche']))
                    <div class="skills">
                      Php ...
                    </div>
+
                    <a href="offer.php?id='.$team["id"].'"> Plus d\'infos </a>
                 </div>'
             ;
             }
             print "\n";
         ?>
+
 
      </div>
     </body>
