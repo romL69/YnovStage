@@ -11,7 +11,7 @@ $skills= $connection->queryGetData("
 if (!isset($_GET['recherche']))
 {
 $teams = $connection->queryGetData("
-        SELECT title, type, class, description
+        SELECT title, type, class, description,id
         FROM osi_offer;
         ");
     }
@@ -26,8 +26,11 @@ if (isset($_GET['recherche']))
     if ($_POST['theme']==='') {
         $_POST['theme']=null;
     }
+    if ($_POST['skill']==='') {
+        $_POST['skill']=null;
+    }
     $sql = "
-        SELECT title, type, class, description, theme
+        SELECT title, type, class, description, theme,id
         FROM osi_offer
         WHERE 1 = 1
     ";
@@ -99,7 +102,7 @@ if (isset($_GET['recherche']))
           </div>
           <div class="form_skill">
             <label for="inputSkill">Spécialité</label>
-            <select id="inputSkill" class="form_skill" name="skills">
+            <select id="inputSkill" class="form_skill" name="skill">
                 <option value=""></option>
                 <?php
                     foreach($skills as $skill)
@@ -135,7 +138,7 @@ if (isset($_GET['recherche']))
                    <div class="skills">
                      Php ...
                    </div>
-                   <button type="button" class="bouton_info">Infos +</button>
+                   <a href="offer.php?'.$team["id"].'"> Plus d\'infos </a>
                 </div>'
             ;
             }
