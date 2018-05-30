@@ -5,9 +5,9 @@ $themes = $connection->queryGetData("
         FROM osi_theme;
         ");
 $skills= $connection->queryGetData("
-SELECT title
-FROM osi_skill
-");
+        SELECT title,id
+        FROM osi_skill
+        ");
 if (!isset($_GET['recherche']))
 {
 $teams = $connection->queryGetData("
@@ -17,15 +17,33 @@ $teams = $connection->queryGetData("
     }
 if (isset($_GET['recherche']))
 {
-var_dump($_POST['theme']);
-    $teams = $connection->queryGetData("
-            SELECT title, type, class, description, theme
-            FROM osi_offer
-            WHERE type='".$_POST['type']."' AND class='".$_POST['class']."' AND theme='".$_POST['theme']."'"
-            );
+    if ($_POST['type']==='') {
+        $_POST['type']=null;
+    }
+    if ($_POST['class']==='') {
+        $_POST['class']=null;
+    }
+    if ($_POST['theme']==='') {
+        $_POST['theme']=null;
+    }
+    $sql = "
+        SELECT title, type, class, description, theme
+        FROM osi_offer
+        WHERE 1 = 1
+    ";
 
-
+    if (isset($_POST['type'])) {
+        $sql .= "AND type ='".$_POST['type']."'";
+    }
+    if (isset($_POST['class'])) {
+        $sql .= "AND class ='".$_POST['class']."'";
+    }
+    if (isset($_POST['theme'])) {
+        $sql .= "AND theme ='".$_POST['theme']."'";
+    }
+    $teams = $connection->queryGetData($sql);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -48,6 +66,7 @@ var_dump($_POST['theme']);
       <div class="form">
         <form class="formulaire" action="?recherche" method="POST">
           <h3> Sélectionnez vos critères de recherche </h3>
+<<<<<<< HEAD
             <div class="form_type">
                 <label for="inputType">Type</label>
                 <select id="inputType" class="form_type" name="type">
@@ -89,6 +108,53 @@ var_dump($_POST['theme']);
                 </select>
               </div>
               <button type="submit" class="form_submit">Recherche</button>
+=======
+          <div class="form_class">
+            <label for="inputClass"> Ecole </label>
+            <select id="inputClass" class="form_class" name="class">
+              <option value=""></option>
+              <option>B1 Ingesup</option>
+              <option>B2 Ingesup</option>
+
+            </select>
+          </div>
+          <div class="form_type">
+            <label for="inputType">Type</label>
+            <select id="inputType" class="form_type" name="type">
+              <option value=""></option>
+              <option>Stage</option>
+              <option>Alternance</option>
+
+            </select>
+          </div>
+          <div class="form_them">
+            <label for="inputThem">Thématique</label>
+            <select id="inputThem" class="form_tem" name="theme">
+                <option value=""></option>
+              <?php
+                foreach ($themes as $theme)
+            {
+                print '<option value="' . $theme['title'].'">' . $theme['title'] . '</option>' . "\n                                ";
+                    }
+                print "\n";
+                ?>
+            </select>
+          </div>
+          <div class="form_skill">
+            <label for="inputSkill">Spécialité</label>
+            <select id="inputSkill" class="form_skill" name="skills">
+                <option value=""></option>
+                <?php
+                    foreach($skills as $skill)
+                    {
+
+                        print'<option value="'.$skill['id'].'"/>'.$skill['title'].'</option>' . "\n";
+                    }
+                 ?>
+            </select>
+          </div>
+          <button type="submit" class="form_submit">Recherche</button>
+>>>>>>> 3ebc171923f938302e1ab3bad45a0a64bbe6b1ba
         </form>
       </div>
 
