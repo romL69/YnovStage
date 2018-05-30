@@ -1,0 +1,8 @@
+{
+    "name": "louise/ynov-stage",
+    "type": "project",
+    "require": {
+        "swiftmailer/swiftmailer": "^6.0",
+        "erusev/parsedown": "^1.7"
+    }
+}

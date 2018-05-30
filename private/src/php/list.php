@@ -61,14 +61,13 @@ if (isset($_GET['recherche']))
     </head>
 
     <body>
-      <h1> Affinez votre recherche </h1>
-      <h1> pour trouvez le profil qui vous intéresse </h1>
+      <h1> Affinez votre recherche <br> pour trouvez le profil qui vous intéresse </h1>
 
       <div class="form">
         <form class="formulaire" action="?recherche" method="POST">
           <h3> Sélectionnez vos critères de recherche </h3>
           <div class="form_class">
-            <label for="inputClass"> Année </label>
+            <label for="inputClass"> Ecole </label>
             <select id="inputClass" class="form_class" name="class">
               <option value=""></option>
               <option>B1 Ingesup</option>
@@ -136,6 +135,7 @@ if (isset($_GET['recherche']))
                    <div class="skills">
                      Php ...
                    </div>
+                   <button type="button" class="bouton_info">Infos +</button>
                 </div>'
             ;
             }
