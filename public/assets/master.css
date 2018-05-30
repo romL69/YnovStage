@@ -50,7 +50,7 @@ form{
   display: flex;
   flex-wrap: wrap;
 }
-.retour, .infos{
+.retour{
   position:absolute;
   font-size: 12px;
   padding: 5px;
@@ -65,7 +65,7 @@ form{
 }
 .infos{
     font-size: 8px;
-    padding: 5px;
+    padding: 12px;
     margin:5px;
     text-align: center;
     color:white;
