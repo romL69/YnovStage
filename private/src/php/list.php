@@ -43,14 +43,13 @@ var_dump($_POST['theme']);
     </head>
 
     <body>
-      <h1> Affinez votre recherche </h1>
-      <h1> pour trouvez le profil qui vous intéresse </h1>
+      <h1> Affinez votre recherche <br> pour trouvez le profil qui vous intéresse </h1>
 
       <div class="form">
         <form class="formulaire" action="?recherche" method="POST">
           <h3> Sélectionnez vos critères de recherche </h3>
           <div class="form_class">
-            <label for="inputClass"> Année </label>
+            <label for="inputClass"> Ecole </label>
             <select id="inputClass" class="form_class" name="class">
               <option selected>B1 Ingesup</option>
               <option>B2 Ingesup</option>
