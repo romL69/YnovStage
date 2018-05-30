@@ -139,9 +139,8 @@ if (isset($_GET['recherche']))
 
             foreach ($teams as $team)
             {
+                $text= substr($team["description"], 14, 50);
                 $Parsedown = new Parsedown();
-                $Parsedown->text($team["description"]);
-                $to_show= substr($Parsedown, 14, 45);
 
                 print '<div class="offer">
                    <div class="title">
@@ -152,13 +151,13 @@ if (isset($_GET['recherche']))
                      '.$team["class"].'
                    </div>
                    <div class="description">
-                       '.$to_show.'
+                       '.$Parsedown->text($text).'
                    </div>
                    <div class="skills">
                      Php ...
                    </div>
 
-                   <a href="offer.php?id='.$team["id"].'"> Plus d\'infos </a>
+                   <a class="infos" href="offer.php?id='.$team["id"].'"> Plus d\'infos </a>
                 </div>'
             ;
             }
