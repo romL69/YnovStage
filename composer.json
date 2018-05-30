@@ -1,8 +1,11 @@
 {
-    "name": "louise/ynov-stage",
+    "name": "romlo/ynov-stage",
     "type": "project",
-    "require": {
-        "swiftmailer/swiftmailer": "^6.0",
-        "erusev/parsedown": "^1.7"
-    }
+    "authors": [
+        {
+            "name": "romainLoire",
+            "email": "romain.loire@ynov.com"
+        }
+    ],
+    "require": {}
 }

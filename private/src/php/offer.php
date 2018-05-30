@@ -1,21 +1,23 @@
 <?php
+require_once 'func/connection.php';
+
 //SWIFT MAILER
-require_once '../../../vendor/autoload.php';
+require_once (__DIR__.'/../../../vendor/autoload.php');
 // Create the Transport
-$transport = (new Swift_SmtpTransport('smtp.example.org', 25))
-  ->setUsername('your username')
-  ->setPassword('your password')
-;
+//$transport = (new Swift_SmtpTransport('smtp.example.org', 25))
+  //->setUsername('your username')
+ // ->setPassword('your password')
+//;
 // Create the Mailer using your created Transport
-$mailer = new Swift_Mailer($transport);
+//$mailer = new Swift_Mailer($transport);
 // Create a message
-$message = (new Swift_Message('Renseignements à propos d\'un profil'))
-  ->setFrom(['john@doe.com' => 'John Doe'])
-  ->setTo(['romain.loire@ynov.com' => 'Romain Loire'])
-  ->setBody('Je suis un ananas')
-  ;
+//$message = (new Swift_Message('Renseignements à propos d\'un profil'))
+  //->setFrom(['john@doe.com' => 'John Doe'])
+ // ->setTo(['romain.loire@ynov.com' => 'Romain Loire'])
+//  ->setBody('Je suis un ananas')
+ // ;
 // Send the message
-$result = $mailer->send($message);
+//$result = $mailer->send($message);
 ?>
 
 
@@ -24,7 +26,7 @@ $result = $mailer->send($message);
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="master.css" >
+        <link rel="stylesheet" href="/assets/master.css" >
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <title>Détails de l'offre</title>
     </head>
@@ -33,7 +35,7 @@ $result = $mailer->send($message);
 
       <div class="retour">
         <p>
-          <a href="ynovStage/list.php"> < Retour </a>
+          <a href="list.php"> < Retour </a>
         </p>
       </div>
 

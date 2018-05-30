@@ -1,10 +1,10 @@
 <?php
 
 //parsedown pour les markdown
-$Parsedown = new Parsedown();
-echo $Parsedown->text('Hello _Parsedown_!'); # prints: <p>Hello <em>Parsedown</em>!</p>
+//$Parsedown = new Parsedown();
+//echo $Parsedown->text('Hello _Parsedown_!'); # prints: <p>Hello <em>Parsedown</em>!</p>
 // you can also parse inline markdown only
-echo $Parsedown->line('Hello _Parsedown_!'); # prints: Hello <em>Parsedown</em>!
+//echo $Parsedown->line('Hello _Parsedown_!'); # prints: Hello <em>Parsedown</em>!
 
 //bails de Romain
 require_once 'func/connection.php';
@@ -88,7 +88,7 @@ if (isset($_GET['createOffer']))
           </div>
           <div class="form-div1 form-div2">
                     <label class="form-label">Description</label>
-                    <input type="text" name="description" class="input"/>
+                    <textarea name="description" class="input"/></textarea>
                 </div>
           <button type="submit" class="form_submit">CREER UNE OFFRE</button>
 
