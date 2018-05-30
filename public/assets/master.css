@@ -47,8 +47,13 @@ form{
   /*width: 428px;*/
   height: auto;
   box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
+}
+.offer{
+    display:block;
+}
+.left, .right{
+    display: flex;
+    flex-wrap: wrap;
 }
 .retour{
   position:absolute;
