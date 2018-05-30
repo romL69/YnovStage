@@ -86,6 +86,8 @@ p{
   margin:5px auto 5px;
 }
 .subtitle{
+    text-align: center;
+font-size:120%;
   display: flex;
   color:gray;
   font-size: 70%;
