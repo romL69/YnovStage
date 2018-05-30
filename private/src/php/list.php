@@ -70,6 +70,7 @@ if (isset($_GET['recherche']))
         <form class="formulaire" action="?recherche" method="POST">
           <h3> Sélectionnez vos critères de recherche </h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div class="form_type">
                 <label for="inputType">Type</label>
                 <select id="inputType" class="form_type" name="type">
@@ -111,6 +112,8 @@ if (isset($_GET['recherche']))
                 </select>
               </div>
               <button type="submit" class="form_submit">Recherche</button>
+=======
+>>>>>>> 4957b36f649255ea055b0b97a5fc2cec3526c951
           <div class="form_class">
             <label for="inputClass"> Ecole </label>
             <select id="inputClass" class="form_class" name="class">
