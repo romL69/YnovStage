@@ -37,9 +37,9 @@ $offre=$connection->queryGetData("
               <tr>
                 <td>
                   <div class="title">
-                    <h4><?php
+                    <h2><?php
                     print $offre[0]["title"];
-                     ?> </h4>
+                     ?> </h2>
                   </div>
                 </td>
               </tr>
