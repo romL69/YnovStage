@@ -7,6 +7,12 @@ Nous avons choisi de mettre en place trois pages : la liste des offres, le déta
 
 Page Liste des offres
 ---------------------
-Cette page se divise en deux parties. On y trouve premièrement le formulaire qui permet d'affiner la rechercher et deuxièmement la liste des offres correspondant aux critères plus haut. 
+Cette page se divise en deux parties. On y trouve premièrement le __formulaire__ qui permet d'affiner la rechercher et deuxièmement la __liste des offres__ correspondant aux critères plus haut. Initialement, cette page affiche un formulaire de recherche vierge et toutes les offres disponibles à ce jour.
 
-Le formulaire doit permettre de chercher selon le type d'offre (stage, alternance, CDD, CDI), 
+Le formulaire doit permettre de chercher selon le _type d'offre_ (stage, alternance, CDD, CDI), l'école/domaine (Ingesup, ISEE, IMART, Audiovisuel et Jeux vidéo), l'intitulé (genre "Développement Web) et la spécialité (php, html...). En appuyant sur le bouton "Rechercher", on lance le tri des offres en dessous.
+
+Les aperçus d'offres sont 
+
+
+
+

@@ -35,7 +35,7 @@ require_once (__DIR__.'/../../../vendor/autoload.php');
 
       <div class="retour">
         <p>
-          <a href="list.php"> < Retour </a>
+          <a href="liste"> < Retour </a>
         </p>
       </div>
 
@@ -62,7 +62,10 @@ require_once (__DIR__.'/../../../vendor/autoload.php');
               <tr>
                 <td>
                   <div class="description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et dui dolor. Ut laoreet tortor at sapien interdum rutrum. Maecenas porttitor sed diam vel tincidunt. Donec sed facilisis mauris. Integer scelerisque volutpat quam, suscipit lacinia magna rhoncus nec. Nam scelerisque lacus ut leo tincidunt, tincidunt imperdiet risus ultrices. Pellentesque ullamcorper leo sit amet maximus molestie.
+                      <?php
+                      $Parsedown = new Parsedown();
+                      echo $Parsedown->text($offre[0]['description']);
+                      ?>
                   </div>
                 </td>
               </tr>
