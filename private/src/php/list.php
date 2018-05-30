@@ -1,5 +1,7 @@
 <?php
 require_once 'func/connection.php';
+require_once (__DIR__.'/../../../vendor/autoload.php');
+
 $themes = $connection->queryGetData("
         SELECT title
         FROM osi_theme;
@@ -34,7 +36,6 @@ if (isset($_GET['recherche']))
         FROM osi_offer
         WHERE 1 = 1
     ";
-
     if (isset($_POST['type'])) {
         $sql .= "AND type ='".$_POST['type']."'";
     }
@@ -44,9 +45,7 @@ if (isset($_GET['recherche']))
     if (isset($_POST['theme'])) {
         $sql .= "AND theme ='".$_POST['theme']."'";
     }
-    if (isset($_POST['skill'])) {
-        $sql .= "AND theme ='".$_POST['theme']."'";
-    }
+
     $teams = $connection->queryGetData($sql);
 }
 ?>
@@ -88,7 +87,7 @@ if (isset($_GET['recherche']))
                 <label for="inputClass"> Ecole </label>
                 <select id="inputClass" class="form_class" name="class">
                     <option value=""></option>
-                    <option >Ingesup</option>
+                    <option >B1 Ingesup</option>
                     <option>Digital Business School</option>
                     <option> Animation 3D / Jeux vidéo </option>
                     <option> Web, com & graphic design</option>
@@ -105,7 +104,7 @@ if (isset($_GET['recherche']))
 
                     foreach ($themes as $theme)
                 {
-                    print '<option value="' . $theme['title'].'">' . $theme['title'] . '</option>' . "\n                                ";
+                    print '<option value="' . $theme['title'].'">' . $theme['title'] . '</option>' . "\n";
                         }
                     print "\n";
                     ?>
@@ -128,7 +127,20 @@ if (isset($_GET['recherche']))
             <button type="submit" class="form_submit">Recherche</button>
         </form>
       </div>
-
+      <?php
+      if(isset($_GET['recherche']))
+        {
+            print 'Criteres de recherche : ';
+            if (isset($_POST['type']))
+            {
+                print $_POST['type'];
+            }
+            if (isset($_POST['class'])) {
+                print "    ";
+                print $_POST['class'];
+            }
+        }
+       ?>
 
 
 
@@ -139,26 +151,26 @@ if (isset($_GET['recherche']))
 
             foreach ($teams as $team)
             {
+                $text=substr($team["description"], 14, 53);
                 $Parsedown = new Parsedown();
-                $Parsedown->text($team["description"]);
-                $to_show= substr($Parsedown, 14, 45);
+
 
                 print '<div class="offer">
                    <div class="title">
                      <h4>'.$team["title"].'</h4>
                    </div>
-                   '.$team["type"].'
+                     '.$team["type"].'
                    <div class="classe">
                      '.$team["class"].'
                    </div>
                    <div class="description">
-                       '.$to_show.'
+                     '.$Parsedown->text($text).'
                    </div>
                    <div class="skills">
                      Php ...
                    </div>
 
-                   <a href="offer.php?id='.$team["id"].'"> Plus d\'infos </a>
+                   <a href="offer.php?id='.$team["id"].'"> Plus d\'infos... </a>
                 </div>'
             ;
             }
