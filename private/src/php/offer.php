@@ -1,23 +1,7 @@
 <?php
 require_once 'func/connection.php';
-
-//SWIFT MAILER
 require_once (__DIR__.'/../../../vendor/autoload.php');
-// Create the Transport
-//$transport = (new Swift_SmtpTransport('smtp.example.org', 25))
-  //->setUsername('your username')
- // ->setPassword('your password')
-//;
-// Create the Mailer using your created Transport
-//$mailer = new Swift_Mailer($transport);
-// Create a message
-//$message = (new Swift_Message('Renseignements à propos d\'un profil'))
-  //->setFrom(['john@doe.com' => 'John Doe'])
- // ->setTo(['romain.loire@ynov.com' => 'Romain Loire'])
-//  ->setBody('Je suis un ananas')
- // ;
-// Send the message
-//$result = $mailer->send($message);
+
 $id=$_GET['id'];
 $offre=$connection->queryGetData("
     SELECT *
@@ -64,7 +48,7 @@ $offre=$connection->queryGetData("
                   <div class="subtitle">
                     <p class="classe">
                       <?php
-                      print $offre[0]["class"]." - ".$offre[0]["period"];
+                        print $offre[0]["class"]." - ".$offre[0]["period"];
                        ?>
                     </p>
                   </div>
@@ -74,10 +58,10 @@ $offre=$connection->queryGetData("
                 <td>
                   <div class="description">
                       <?php
-                      $Parsedown = new Parsedown();
-                      print $Parsedown->text($offre[0]["description"]);
+                        $Parsedown = new Parsedown();
+                        print $Parsedown->text($offre[0]["description"]);
                        ?>
-                   </div>
+                  </div>
                 </td>
               </tr>
             </table>
@@ -93,8 +77,8 @@ $offre=$connection->queryGetData("
 
 
 
-      <div class="contact">
-            <div class="form_fields">
+      <form class="contact">
+            <div class="form_fields" action="?send" method="POST">
               <legend class="title_contact">Nous contacter à propos de ce profil</legend>
               <!--<input type="hidden" name="frm_action" value="create" />
               <input type="hidden" name="form_id" value="2" />
@@ -134,9 +118,29 @@ $offre=$connection->queryGetData("
               <div class"message">
                 <label for="frm_message">Dites-nous tout :<span class="frm_required">*</span></label>
                 <textarea name="frm_message" data-reqmsg="Ce champ ne peut pas être vide"></textarea>
-              </div>
-              <button type="submit" class="contact_validate"> Envoyer </button>
             </div>
-      </div>
+            <button type="submit" class="contact_validate"> Envoyer </button>
+      </form>
+
+
+    <?php
+        //SWIFT MAILER
+        if(isset($_GET["send"])){
+            $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
+                ->setUsername('jeux.ou.il.faut.sinscrire@gmail.com ')
+                ->setPassword('jeuxdefou');
+
+            $mailer = new Swift_Mailer($transport);
+
+            $message = (new Swift_Message('Renseignements à propos d\'un profil'))
+                    ->setFrom(['test-stage@ynov.com' => 'Offre Stage'])
+                    ->setTo([$_POST['frm_mail'] => $_POST['frm_surname']." ".$_POST['frm_name']])
+                    ->setBody($_POST['frm_message']."\n"."\n".$_POST['frm_civility']." ".$_POST['frm_name']." ".$_POST['frm_surname']."\n".
+                        'Mail : '.$_POST['frm_mail']." | Téléphone : ".$_POST['frm_tel'])
+            ;
+            $result = $mailer->send($message);
+        }
+
+    ?>
     </body>
 </html>

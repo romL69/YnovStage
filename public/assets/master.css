@@ -40,7 +40,7 @@ form{
 
 .offer, .left, .right{
   padding: 10px;
-  margin: 20px;
+  margin: 30px;
   border: 2px solid #23b2a4 ;
   box-shadow: inset 0 1px 3px #ddd;
   border-radius: 10px;
@@ -52,7 +52,7 @@ form{
 }
 .retour{
   position:absolute;
-  font-size: 8px;
+  font-size: 12px;
   padding: 5px;
   margin:5px;
   text-align: center;
@@ -65,7 +65,7 @@ form{
 }
 .infos{
     font-size: 8px;
-    padding: 5px;
+    padding: 12px;
     margin:5px;
     text-align: center;
     color:white;
@@ -115,8 +115,12 @@ p{
   padding: 10px;
   font-weight: bold;
 }
-.type, .classe, .description, .skills,   .civility, .name, .surname, .enterprise, .email, .tel, .message{
-  padding: 10px;
+.type, .classe, .description, .skills{
+    padding: 10px;
+
+}
+.civility, .name, .surname, .enterprise, .email, .tel, .message{
+    padding: 10px;
 }
 
 
