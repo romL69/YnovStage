@@ -146,34 +146,45 @@ if (isset($_GET['recherche']))
 
       <!-- Typical offer --->
       <?php
-
-
-
             foreach ($teams as $team)
             {
-                $text=substr($team["description"], 14, 50);
+                $text=substr($team["description"], 14, 70);
                 $Parsedown = new Parsedown();
 
-
-                print '<div class="offer">
-                   <div class="title">
-                     <h4>'.$team["title"].'</h4>
-                   </div>
-                   <div class="type">
-                     '.$team["type"].'
-                   </div>
-                   <div class="classe">
-                     '.$team["class"].'
-                   </div>
-                   <div class="description">
-                       '.$Parsedown->text($text).'
-                   </div>
-                   <div class="skills">
-                     Php ...
-                   </div>
-
-                   <a class="infos" href="offer.php?id='.$team["id"].'"> Plus d\'infos </a>
-                </div>'
+                print '
+                    <div class="offer">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="title">
+                                        <h4>'.$team["title"].'</h4>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="classe">
+                                        '.$team["class"].'
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="description">
+                                        '.$Parsedown->text($text."...").'
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="skills">
+                                        Php ...
+                                    </div>
+                                </td>
+                                <td>
+                                    <a class="infos" href="offer.php?id=' . $team["id"] . '"> Plus d\'infos </a >
+                                </td>
+                            </tr>
+                        </table>
+                    </div > '
             ;
             }
             print "\n";
