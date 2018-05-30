@@ -46,11 +46,11 @@ $offre=$connection->queryGetData("
               <tr>
                 <td>
                   <div class="subtitle">
-                    <h3 class="classe">
+                    <p class="sub">
                       <?php
                         print $offre[0]["class"]." - ".$offre[0]["period"];
                        ?>
-                    </h3>
+                   </p>
                   </div>
                 </td>
               </tr>
