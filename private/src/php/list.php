@@ -44,6 +44,9 @@ if (isset($_GET['recherche']))
     if (isset($_POST['theme'])) {
         $sql .= "AND theme ='".$_POST['theme']."'";
     }
+    if (isset($_POST['skill'])) {
+        $sql .= "AND theme ='".$_POST['theme']."'";
+    }
     $teams = $connection->queryGetData($sql);
 }
 ?>
