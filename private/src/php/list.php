@@ -67,65 +67,19 @@ if (isset($_GET['recherche']))
 
       <div class="form">
         <form class="formulaire" action="?recherche" method="POST">
-          <h3> Sélectionnez vos critères de recherche </h3>
-<<<<<<< HEAD
-          <div class="form_type">
-            <label for="inputType">Type</label>
-            <select id="inputType" class="form_type" name="type">
-              <option value=""></option>
-              <option>Stage</option>
-              <option>Alternance</option>
 
-            </select>
-          </div>
-=======
-            <div class="form_type">
-                <label for="inputType">Type</label>
-                <select id="inputType" class="form_type" name="type">
-                    <option selected>Stage</option>
-                    <option>Alternance</option>
-                    <option> CDD </option>
-                    <option> CDI </option>
-                </select>
-            </div>
-              <div class="form_class">
-                <label for="inputClass"> Ecole </label>
-                <select id="inputClass" class="form_class" name="class">
-                  <option selected>Ingesup</option>
-                  <option>Digital Business School</option>
-                    <option> Animation 3D / Jeux vidéo </option>
-                    <option> Web, com & graphic design</option>
-                    <option> Audiovisuel </option>
-                </select>
-              </div>
-              <div class="form_them">
-                <label for="inputThem"> Intitulé </label>
-                <select id="inputThem" class="form_tem" name="theme">
 
-                  <?php
-                    foreach ($themes as $theme)
-                {
-                    print '<option value="' . $theme['title'].'">' . $theme['title'] . '</option>' . "\n                                ";
-                        }
-                    print "\n";
-                    ?>
-                </select>
-              </div>
-              <div class="form_skill">
-                <label for="inputSkill">Spécialité</label>
-                <select id="inputSkill" class="form_skill" name="speciality">
-                    <?php
-                        foreach($skills as $skill)
-                        {
-                            print'<input type="checkbox" name="skills[]" value="'.$skill['title'].'"/>'.$skill['title'].'<br>';
-                        }
-                     ?>
-                </select>
-              </div>
-              <button type="submit" class="form_submit">Recherche</button>
-
->>>>>>> 79b70ccf99b70a62c0d5e550a660650d8b9dac72
           <div class="form_class">
+              <div class="form_type">
+                  <label for="inputType">Type</label>
+                  <select id="inputType" class="form_type" name="type">
+                      <option value=""></option>
+                      <option >Stage</option>
+                      <option>Alternance</option>
+                      <option> CDD </option>
+                      <option> CDI </option>
+                  </select>
+              </div>
             <label for="inputClass"> Ecole </label>
             <select id="inputClass" class="form_class" name="class">
               <option value=""></option>
@@ -170,7 +124,7 @@ if (isset($_GET['recherche']))
 
 
       <?php
-    
+
             foreach ($teams as $team)
             {
                 print '<div class="offer">
@@ -187,7 +141,7 @@ if (isset($_GET['recherche']))
                    <div class="skills">
                      Php ...
                    </div>
-                   <a href="offer.php?'.$team["id"].'"> Plus d\'infos </a>
+                   <a href="offer.php?id='.$team["id"].'"> Plus d\'infos </a>
                 </div>'
             ;
             }
