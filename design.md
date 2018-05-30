@@ -9,3 +9,4 @@ Page Liste des offres
 ---------------------
 Cette page se divise en deux parties. On y trouve premièrement le formulaire qui permet d'affiner la rechercher et deuxièmement la liste des offres correspondant aux critères plus haut. 
 
+Le formulaire doit permettre de chercher selon le type d'offre (stage, alternance, CDD, CDI), 

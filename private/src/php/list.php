@@ -48,47 +48,47 @@ var_dump($_POST['theme']);
       <div class="form">
         <form class="formulaire" action="?recherche" method="POST">
           <h3> Sélectionnez vos critères de recherche </h3>
-          <div class="form_class">
-            <label for="inputClass"> Ecole </label>
-            <select id="inputClass" class="form_class" name="class">
-              <option selected>B1 Ingesup</option>
-              <option>B2 Ingesup</option>
+            <div class="form_type">
+                <label for="inputType">Type</label>
+                <select id="inputType" class="form_type" name="type">
+                    <option selected>Stage</option>
+                    <option>Alternance</option>
 
-            </select>
-          </div>
-          <div class="form_type">
-            <label for="inputType">Type</label>
-            <select id="inputType" class="form_type" name="type">
-              <option selected>Stage</option>
-              <option>Alternance</option>
+                </select>
+            </div>
+              <div class="form_class">
+                <label for="inputClass"> Ecole </label>
+                <select id="inputClass" class="form_class" name="class">
+                  <option selected>B1 Ingesup</option>
+                  <option>B2 Ingesup</option>
 
-            </select>
-          </div>
-          <div class="form_them">
-            <label for="inputThem">Thématique</label>
-            <select id="inputThem" class="form_tem" name="theme">
+                </select>
+              </div>
+              <div class="form_them">
+                <label for="inputThem">Thématique</label>
+                <select id="inputThem" class="form_tem" name="theme">
 
-              <?php
-                foreach ($themes as $theme)
-            {
-                print '<option value="' . $theme['title'].'">' . $theme['title'] . '</option>' . "\n                                ";
-                    }
-                print "\n";
-                ?>
-            </select>
-          </div>
-          <div class="form_skill">
-            <label for="inputSkill">Spécialité</label>
-            <select id="inputSkill" class="form_skill" name="speciality">
-                <?php
-                    foreach($skills as $skill)
-                    {
-                        print'<input type="checkbox" name="skills[]" value="'.$skill['title'].'"/>'.$skill['title'].'<br>';
-                    }
-                 ?>
-            </select>
-          </div>
-          <button type="submit" class="form_submit">Recherche</button>
+                  <?php
+                    foreach ($themes as $theme)
+                {
+                    print '<option value="' . $theme['title'].'">' . $theme['title'] . '</option>' . "\n                                ";
+                        }
+                    print "\n";
+                    ?>
+                </select>
+              </div>
+              <div class="form_skill">
+                <label for="inputSkill">Spécialité</label>
+                <select id="inputSkill" class="form_skill" name="speciality">
+                    <?php
+                        foreach($skills as $skill)
+                        {
+                            print'<input type="checkbox" name="skills[]" value="'.$skill['title'].'"/>'.$skill['title'].'<br>';
+                        }
+                     ?>
+                </select>
+              </div>
+              <button type="submit" class="form_submit">Recherche</button>
         </form>
       </div>
 
@@ -119,6 +119,7 @@ var_dump($_POST['theme']);
             }
             print "\n";
         ?>
+
      </div>
     </body>
 </html>
