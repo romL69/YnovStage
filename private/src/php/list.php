@@ -133,17 +133,17 @@ if (isset($_GET['recherche']))
       <?php
       if(isset($_GET['recherche']))
         {
-            print 'Criteres de recherche : ';
+            print 'Critères de recherche : ';
             if (isset($_POST['type']))
             {
                 print $_POST['type'];
             }
             if (isset($_POST['class'])) {
-                print "    ";
+                print "  -  ";
                 print $_POST['class'];
             }
             if (isset($_POST['theme'])) {
-                print "    ";
+                print "  -  ";
                 print $_POST['theme'];
             }
         }
