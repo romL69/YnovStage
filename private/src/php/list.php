@@ -105,7 +105,7 @@ if (isset($_GET['recherche']))
                 <label for="inputClass"> Ecole </label>
                 <select id="inputClass" class="form_class" name="class">
                     <option value=""></option>
-                    <option >B1 Ingesup</option>
+                    <option >Ingesup</option>
                     <option>Digital Business School</option>
                     <option> Animation 3D / Jeux vidéo </option>
                     <option> Web, com & graphic design</option>
