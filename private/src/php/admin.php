@@ -69,8 +69,8 @@ $teams = $connection->queryGetData("
       <h1 class="admin_title"> Créer des thèmes</h1>
       <form class="" action="?createOffer" method="post">
           <div class="form_title">
-              <label class="inputTitle">Titre de l'offre</label>
-              <input type="text" name="inputTitle" class="input"/>
+              <label for="title">Titre de l'offre</label>
+              <input type="text" name="title" class="input"/>
           </div>
           <div class="form_type">
               <label for="inputType">Type</label>
