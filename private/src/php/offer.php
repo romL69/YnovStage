@@ -80,8 +80,8 @@ WHERE osi_offer_skill.offer_id='".$_GET['id']."'
 
 
 
-      <form class="contact">
-            <div class="form_fields" action="?send" method="POST">
+      <form class="form_fields" action="?send" method="POST">
+            <div >
               <legend class="title_contact">Nous contacter à propos de ce profil</legend>
               <!--<input type="hidden" name="frm_action" value="create" />
               <input type="hidden" name="form_id" value="2" />
