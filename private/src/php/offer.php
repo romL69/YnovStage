@@ -26,6 +26,22 @@ WHERE osi_offer_skill.offer_id='".$_GET['id']."'
         <link rel="stylesheet" href="/assets/master.css" >
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <title>Détails de l'offre</title>
+
+        <!--Balises méta-->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Détails offre stagiaire alternants informatique Lyon" />
+        <meta property="og:sitename" content="ynovStage" />
+        <meta property="og:description" content="Découvrez les détails d'un profil de stagiaire ou d'alternant en informatique sur Lyon" />
+
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'GA_TRACKING_ID');
+        </script>
     </head>
 
     <body>

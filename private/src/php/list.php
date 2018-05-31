@@ -60,6 +60,21 @@ if (isset($_GET['recherche']))
         <link rel="stylesheet" href="/assets/master.css" >
         <!---<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 ---->
+        <!--Balises méta-->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Recherche stagiaires alternants  informatique Lyon" />
+        <meta property="og:sitename" content="ynovStage" />
+        <meta property="og:description" content="Trouver un stagiaire ou un alternant en informatique sur Lyon" />
+
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'GA_TRACKING_ID');
+        </script>
     </head>
 
     <body>

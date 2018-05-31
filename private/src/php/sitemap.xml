@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF_8">
+<urlset xmlns="http://www.sitemap.org.schema/sitemap/0.9"
+	<url>
+		<loc>http://ynovstage/offer.php?1</loc>
+	</url>
+	<url>
+		<loc>http://ynovstage/list</loc>
+	</url>
+	<url>
+		<loc>http://ynovstage/admin.php</loc>
+	</url>
+	<url>
+		<loc>http://ynovstage/offer.php?2</loc>
+	</url>
+</urlset>
