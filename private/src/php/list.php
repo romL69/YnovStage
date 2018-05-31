@@ -78,6 +78,12 @@ if (isset($_GET['recherche']))
     </head>
 
     <body>
+        <header>
+            <div class="banner">
+                <img url="/public/logo_ynov_campus_rvb_blanc.jpg" alt="logo ynov">
+            </div>
+        </header>
+
         <div class="retour">
           <p>
             <a href="admin">  Page Admin </a>
@@ -177,7 +183,7 @@ if (isset($_GET['recherche']))
                 print '<div class="offer">
 
                                         <div class="title">
-                                            <h4>'.$team["title"].'</h4>
+                                            <h2>'.$team["title"].'</h2>
                                         </div>
 
                                         <div class="type">

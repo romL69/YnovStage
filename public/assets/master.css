@@ -5,6 +5,13 @@
   font-family: "Montserrat";
   text-align: center;
 }
+header{
+  position: relative;
+  background-color:black;
+  height:auto;
+  top:0;
+  left:0;
+}
 a{
   text-decoration: none;
   color:inherit;
@@ -76,7 +83,7 @@ form{
   margin:5px;
   text-align: center;
   left: 5px;
-  top: 5px;
+  top: 20px;
   color:white;
   /*font-weight: bold;*/
   background-color:#e94e6d;

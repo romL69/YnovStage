@@ -45,58 +45,61 @@ WHERE osi_offer_skill.offer_id='".$_GET['id']."'
     </head>
 
     <body>
-      <div class="retour">
-        <p>
-          <a href="liste"> < Retour </a>
-        </p>
-      </div>
-      <div class="info_container">
-          <div class="left">
-            <table>
-              <tr>
-                <td>
-                  <div class="title">
-                    <h1><?php
-                        print $offre[0]["title"];
-                     ?> </h1>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="subtitle">
-                      <p class="sub">
-                 <?php
-                   print $offre[0]["class"]." - ".$offre[0]["period"];
-                  ?>
-              </p>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="description">
-                      <?php
-                        $Parsedown = new Parsedown();
-                        print $Parsedown->text($offre[0]["description"]);
-                       ?>
-                  </div>
-                </td>
-              </tr>
-            </table>
-          </div>
-          <div class="right">
-            <div class="skills">
-              <p id="php"><i class="fab fa-php"></i> PHP</p>
-              <p id="node_js"><i class="fab fa-node"></i> Node.js</p>
+        <header>
+            <div class="banner">
+                <img url="/public/logo_ynov_campus_rvb_blanc.jpg" alt="logo ynov">
             </div>
-          </div>
+        </header>
 
-      </div>
+        <div class="retour">
+            <p>
+              <a href="liste"> < Retour </a>
+            </p>
+        </div>
+        <div class="info_container">
+            <div class="left">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="title">
+                                <h1><?php
+                                    print $offre[0]["title"];
+                                ?> </h1>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="subtitle">
+                                <p class="sub">
+                                <?php
+                                    print $offre[0]["class"]." - ".$offre[0]["period"];
+                                    ?>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="description">
+                                <?php
+                                    $Parsedown = new Parsedown();
+                                    print $Parsedown->text($offre[0]["description"]);
+                                ?>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="right">
+                <div class="skills">
+                    <p id="php"><i class="fab fa-php"></i> PHP</p>
+                    <p id="node_js"><i class="fab fa-node"></i> Node.js</p>
+                </div>
+            </div>
+        </div>
 
-
-
-      <form class="form_fields" action="?send" method="POST">
+        <form class="form_fields" action="?send" method="POST">
               <legend class="title_contact">Nous contacter à propos de ce profil</legend>
               <!--<input type="hidden" name="frm_action" value="create" />
               <input type="hidden" name="form_id" value="2" />
