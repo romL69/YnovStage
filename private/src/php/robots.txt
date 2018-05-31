@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /private
+Allow: /ynovStage/public/assets/master.css
+Allow: /ynovStage/public/index.php
+Disallow:/ynovStage/public/.htaccess
+Disallow: /vendor
+
+Sitemap: http://www.ynovstage.fr/sitemap.xml
