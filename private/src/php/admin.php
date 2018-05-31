@@ -55,11 +55,7 @@ $teams = $connection->queryGetData("
   </head>
   <body>
 
-      <header>
-          <div id="header" style="background: url(../../../public/assets/logo_ynov_campus_rvb_blanc.jpg) no-repeat  center right">
-              /public/logo_ynov_campus_rvb_blanc.jpg" alt="logo ynov">
-          </div>
-      </header>
+    
 
       <div class="retour">
         <p>

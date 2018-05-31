@@ -45,11 +45,7 @@ WHERE osi_offer_skill.offer_id='".$_GET['id']."'
     </head>
 
     <body>
-        <header>
-            <div id="header" style="background: url(../../../public/assets/logo_ynov_campus_rvb_blanc.jpg) no-repeat  center right">
 
-            </div>
-        </header>
 
         <div class="retour">
             <p>

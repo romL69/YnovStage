@@ -6,11 +6,15 @@
   text-align: center;
 }
 header{
-  position: relative;
+  position:relative;
   background-color:black;
-  height:20px;
+  height:100px;
+  width:auto;
   top:0;
   left:0;
+}
+#banner{
+    size:50px;
 }
 a{
   text-decoration: none;
@@ -85,7 +89,7 @@ form{
   margin:5px;
   text-align: center;
   left: 5px;
-  top: 20px;
+  top: 5px;
   color:white;
   /*font-weight: bold;*/
   background-color:#e94e6d;

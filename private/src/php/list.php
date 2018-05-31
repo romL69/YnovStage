@@ -78,18 +78,14 @@ if (isset($_GET['recherche']))
     </head>
 
     <body>
-        <header>
-            <div id="header" style="background: url(../../../public/assets/logo_ynov_campus_rvb_blanc.jpg) no-repeat  center right">
 
-            </div>
-        </header>
 
         <div class="retour">
           <p>
             <a href="admin">  Page Admin </a>
           </p>
         </div>
-      <h1 class="list_title"> Affinez votre recherche <br> pour trouvez le profil qui vous intéresse </h1>
+      <h1 class="list_title"> Affinez votre recherche <br> pour trouver le profil qui vous intéresse </h1>
 
       <!-- formulaire de recherche --->
       <div class="form">
@@ -152,6 +148,9 @@ if (isset($_GET['recherche']))
         </form>
       </div>
       <?php
+      if (!isset($_GET['recherche'])) {
+          print 'Critères de recherche : aucun';
+      }
       if(isset($_GET['recherche']))
         {
             print 'Critères de recherche : ';
