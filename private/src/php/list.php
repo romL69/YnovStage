@@ -175,23 +175,23 @@ if (isset($_GET['recherche']))
 
 
                 print '<div class="offer">
-                      
+
                                         <div class="title">
                                             <h4>'.$team["title"].'</h4>
                                         </div>
-                                    
+
                                         <div class="type">
                                             '.$team["type"].'
                                         </div>
-                                        
+
                                         <div class="classe">
                                              '.$team["class"].'
                                         </div>
-                                    
+
                                         <div class="description">
                                             '.$Parsedown->text($text).'
                                         </div>
-                                    
+
                                         <a class="infos" href="offer.php?id='.$team["id"].'"> Plus d\'infos </a>
                         </div>'
             ;
