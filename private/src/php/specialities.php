@@ -30,6 +30,11 @@ if (isset($_GET['createSpeciality']))
     </head>
 
     <body>
+        <div class="retour">
+          <p>
+            <a href="admin">  Page Admin </a>
+          </p>
+        </div>
         <form class="create_them" action="?createTheme" method="post">
             <div class="create_them_text">
                 <label for="theme">Créer un theme</label>
