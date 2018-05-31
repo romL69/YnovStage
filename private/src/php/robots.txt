@@ -1,6 +1,6 @@
 User-agent: *
 Disallow: /private
-Allow: /ynovStage/public/assets/master.css
+Allow: /ynovStage/public/assets
 Allow: /ynovStage/public/index.php
 Disallow:/ynovStage/public/.htaccess
 Disallow: /vendor

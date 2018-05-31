@@ -79,8 +79,8 @@ if (isset($_GET['recherche']))
 
     <body>
         <header>
-            <div class="banner">
-                <img src="../../../public/assets/logo_ynov_campus_rvb_blanc.jpg" alt="logo ynov">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  /public/logo_ynov_campus_rvb_blanc.jpg" alt="logo ynov">
+            <div id="header" style="background: url(../../../public/assets/logo_ynov_campus_rvb_blanc.jpg) no-repeat  center right">
+
             </div>
         </header>
 
