@@ -36,6 +36,14 @@ $teams = $connection->queryGetData("
         SELECT title, type, class, description,id
         FROM osi_offer;
         ");
+        if(isset($_GET['delete']))
+        {
+            $delete=$connection->queryCreateData("
+            DELETE FROM osi_offer
+            WHERE id='".$_GET['delete']."';
+            ");
+            header('Location: admin.php');
+        }
  ?>
 
 <!DOCTYPE html>
@@ -102,15 +110,9 @@ $teams = $connection->queryGetData("
       </form>
       <div class="">
           <?php
-
-
-
                 foreach ($teams as $team)
                 {
-                    $text=substr($team["description"], 14, 60);
                     $Parsedown = new Parsedown();
-
-
                     print '<div class="offer">
                        <div class="title">
                          <h4>'.$team["title"].'</h4>
@@ -122,14 +124,11 @@ $teams = $connection->queryGetData("
                          '.$team["class"].'
                        </div>
                        <div class="description">
-                           '.$Parsedown->text($text).'
+                           '.$Parsedown->text($team["description"]).'
                        </div>
-
-
-                       <a class="infos" href="offer.php?id='.$team["id"].'"> Plus d\'infos </a>
+                       <a class="delete" href="?delete='.$team["id"].'"> Supprimer l\'offre </a>
                     </div>'
-                ;
-                }
+                ;}
                 print "\n";
             ?>
       </div>
