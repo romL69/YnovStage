@@ -28,7 +28,7 @@ if (isset($_GET['recherche']))
     if ($_POST['theme']==='') {
         $_POST['theme']=null;
     }
-    
+
     $sql = "
         SELECT title, type, class, description, theme,id
         FROM osi_offer
@@ -148,9 +148,6 @@ if (isset($_GET['recherche']))
 
       <!-- Typical offer --->
       <?php
-
-
-
             foreach ($teams as $team)
             {
                 $text=substr($team["description"], 14, 60);
