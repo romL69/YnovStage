@@ -11,6 +11,7 @@ $to_show = $_GET['description'];
 $Parsedown = new Parsedown();
 echo $Parsedown->text($to_show);
 */
+require_once (__DIR__.'/../../../vendor/autoload.php');
 
 require_once 'func/connection.php';
 $themes = $connection->queryGetData("
@@ -31,6 +32,10 @@ if (isset($_GET['createOffer']))
             ('$title','$class', '$type', '$theme','$description');
             ");
 }
+$teams = $connection->queryGetData("
+        SELECT title, type, class, description,id
+        FROM osi_offer;
+        ");
  ?>
 
 <!DOCTYPE html>
@@ -95,5 +100,38 @@ if (isset($_GET['createOffer']))
           <button type="submit" class="form_submit">CREER UNE OFFRE</button>
 
       </form>
+      <div class="">
+          <?php
+
+
+
+                foreach ($teams as $team)
+                {
+                    $text=substr($team["description"], 14, 60);
+                    $Parsedown = new Parsedown();
+
+
+                    print '<div class="offer">
+                       <div class="title">
+                         <h4>'.$team["title"].'</h4>
+                       </div>
+                       <div class="type">
+                         '.$team["type"].'
+                       </div>
+                       <div class="classe">
+                         '.$team["class"].'
+                       </div>
+                       <div class="description">
+                           '.$Parsedown->text($text).'
+                       </div>
+
+
+                       <a class="infos" href="offer.php?id='.$team["id"].'"> Plus d\'infos </a>
+                    </div>'
+                ;
+                }
+                print "\n";
+            ?>
+      </div>
   </body>
 </html>

@@ -28,9 +28,7 @@ if (isset($_GET['recherche']))
     if ($_POST['theme']==='') {
         $_POST['theme']=null;
     }
-    if ($_POST['skill']==='') {
-        $_POST['skill']=null;
-    }
+    
     $sql = "
         SELECT title, type, class, description, theme,id
         FROM osi_offer
@@ -111,7 +109,7 @@ if (isset($_GET['recherche']))
                 </select>
             </div>
 
-             <div class="form_skill">
+            <!--- <div class="form_skill">
                  <label for="inputSkill">Spécialité</label>
                  <select id="inputSkill" class="form_skill" name="skill">
                      <option value=""></option>
@@ -123,7 +121,7 @@ if (isset($_GET['recherche']))
                     }
                  ?>
                  </select>
-             </div>
+             </div>--->
             <button type="submit" class="form_submit">Recherche</button>
         </form>
       </div>
@@ -139,6 +137,10 @@ if (isset($_GET['recherche']))
                 print "    ";
                 print $_POST['class'];
             }
+            if (isset($_POST['theme'])) {
+                print "    ";
+                print $_POST['theme'];
+            }
         }
        ?>
 
@@ -151,7 +153,7 @@ if (isset($_GET['recherche']))
 
             foreach ($teams as $team)
             {
-                $text=substr($team["description"], 14, 50);
+                $text=substr($team["description"], 14, 60);
                 $Parsedown = new Parsedown();
 
 
@@ -168,9 +170,7 @@ if (isset($_GET['recherche']))
                    <div class="description">
                        '.$Parsedown->text($text).'
                    </div>
-                   <div class="skills">
-                     Php ...
-                   </div>
+
 
                    <a class="infos" href="offer.php?id='.$team["id"].'"> Plus d\'infos </a>
                 </div>'
