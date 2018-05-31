@@ -100,7 +100,7 @@ form{
 .right{
   border: 2px solid #23b2a4 ;
   border-radius: 10px;
-  flex:25%;
+  flex:10%;
 }
 .skills{
   display: inline-block;
@@ -116,6 +116,7 @@ p{
 }
 .info_container{
   padding-top: 50px;
+  margin:15px;
   display:flex;
 }
 
