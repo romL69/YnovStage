@@ -47,7 +47,7 @@ WHERE osi_offer_skill.offer_id='".$_GET['id']."'
     <body>
         <header>
             <div class="banner">
-                <img url="/public/logo_ynov_campus_rvb_blanc.jpg" alt="logo ynov">
+                <img url="../../../public/logo_ynov_campus_rvb_blanc.jpg" alt="logo ynov">
             </div>
         </header>
 
