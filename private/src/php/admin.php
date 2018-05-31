@@ -65,19 +65,23 @@ $teams = $connection->queryGetData("
                     <label class="form-label">Titre de l'offre</label>
                     <input type="text" name="title" class="input"/>
                 </div>
+                <div class="form_type">
+                  <label for="inputType">Type</label>
+                  <select id="inputType" class="form_type" name="type">
+                    <option selected>Stage</option>
+                    <option>Alternance</option>
+                    <option> CDD </option>
+                    <option> CDI </option>
+                  </select>
+                </div>
           <div class="form_type">
             <label for="inputType">Classe</label>
             <select id="inputType" class="form_type" name="class">
-              <option selected>B1 Ingesup</option>
-              <option>B2 Ingesup</option>
-
-            </select>
-          </div>
-          <div class="form_type">
-            <label for="inputType">Type</label>
-            <select id="inputType" class="form_type" name="type">
-              <option selected>Stage</option>
-              <option>Alternance</option>
+              <option selected>Ingesup</option>
+              <option>Digital Business School</option>
+              <option> Animation 3D / Jeux vidéo </option>
+              <option> Web, com & graphic design</option>
+              <option> Audiovisuel </option>
 
             </select>
           </div>
