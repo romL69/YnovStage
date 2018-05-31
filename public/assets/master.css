@@ -26,6 +26,7 @@ form{
   box-shadow: inset 0 1px 3px #ddd;
   color:white;
 }
+
 #inputClass, #inputThem, #inputType, #inputSkill{
   margin: 5px;
   padding: 10px;
@@ -115,19 +116,7 @@ p{
   padding-top: 50px;
   display:flex;
 }
-.form_fields{
-  color:white;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 2em auto 3em;
-  background-color: #23b2a4;
-  border-radius: 5px;
-  display: block;
-  width: 428px;
-  height: auto;
-  box-sizing: border-box;
-  box-shadow: inset 0 1px 3px #ddd;
-}
+
 .title{
   padding:10px;
   color:#e94e6d;
@@ -145,7 +134,7 @@ p{
 }
 
 /*----------Logo Ynov--------*/
-background: white url(C:\Users\Louise\Pictures\Ynov_brand\logo_ynov_campus_rvb_couleur.png) no-repeat center bottom;
+/*background: white url(C:\Users\Louise\Pictures\Ynov_brand\logo_ynov_campus_rvb_couleur.png) no-repeat center bottom;*/
 
 /*----------ICONS--------*/
 #php>i{

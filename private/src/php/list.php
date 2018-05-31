@@ -139,11 +139,11 @@ if (isset($_GET['recherche']))
                 print $_POST['type'];
             }
             if (isset($_POST['class'])) {
-                print "    ";
+                print "  -  ";
                 print $_POST['class'];
             }
             if (isset($_POST['theme'])) {
-                print "    ";
+                print "  -  ";
                 print $_POST['theme'];
             }
         }
