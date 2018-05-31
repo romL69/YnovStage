@@ -63,6 +63,11 @@ if (isset($_GET['recherche']))
     </head>
 
     <body>
+        <div class="retour">
+          <p>
+            <a href="admin">  Page Admin </a>
+          </p>
+        </div>
       <h1> Affinez votre recherche <br> pour trouvez le profil qui vous intéresse </h1>
 
       <!-- formulaire de recherche --->

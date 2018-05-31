@@ -54,6 +54,11 @@ $teams = $connection->queryGetData("
     <link rel="stylesheet" href="/assets/master.css" >
   </head>
   <body>
+      <div class="retour">
+        <p>
+          <a href="liste"> < Retour </a>
+        </p>
+      </div>
       <a href="specialities.php"> Créer des themes<input type="button"></a>
       <form class="" action="?createOffer" method="post">
           <div class="form-div1 form-div2">
