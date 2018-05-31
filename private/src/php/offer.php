@@ -42,7 +42,7 @@ WHERE osi_offer_skill.offer_id='".$_GET['id']."'
                 <td>
                   <div class="title">
                     <h1><?php
-                    print $offre[0]["title"];
+                        print $offre[0]["title"];
                      ?> </h1>
                   </div>
                 </td>
