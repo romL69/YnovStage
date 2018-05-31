@@ -25,11 +25,11 @@ if (isset($_GET['createOffer']))
     $theme = $_POST['theme'];
     $description=$_POST['description'];
     $title=$_POST['title'];
-
+    $period=$_POST['period'];
     $connection->queryCreateData("
-            INSERT INTO osi_offer (title,class, type, theme, description)
+            INSERT INTO osi_offer (title,class, type, theme, description, period)
             VALUES
-            ('$title','$class', '$type', '$theme','$description');
+            ('$title','$class', '$type', '$theme','$description','$period');
             ");
 }
 $teams = $connection->queryGetData("
@@ -117,6 +117,10 @@ $teams = $connection->queryGetData("
 
             </select>
           </div>
+          <div class="form-div1 form-div2">
+                    <label class="form-label">Periode</label>
+                    <input type="text" name="period" />
+                </div>
           <div class="form-div1 form-div2">
                     <label class="form-label">Description</label>
                     <textarea maxlength="100000" name="description" class="input"/></textarea>
