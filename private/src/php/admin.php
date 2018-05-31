@@ -116,12 +116,12 @@ $teams = $connection->queryGetData("
             </select>
           </div>
           <div class="form_period">
-              <label for="inputPeriod">Période</label>
-              <input type="text" name="inputPeriod" />
+              <label for="period">Période</label>
+              <input type="text" name="period" />
           </div>
           <div class="form_descr">
-              <label for="inputDescription">Description</label>
-              <textarea maxlength="100000" name="inputDescription" class="input"/></textarea>
+              <label for="description">Description</label>
+              <textarea maxlength="100000" name="description" class="input"/></textarea>
           </div>
           <button type="submit" class="form_submit">CREER UNE OFFRE</button>
 
