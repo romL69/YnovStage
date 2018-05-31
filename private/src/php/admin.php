@@ -54,12 +54,19 @@ $teams = $connection->queryGetData("
     <link rel="stylesheet" href="/assets/master.css" >
   </head>
   <body>
+
+      <header>
+          <div class="banner">
+              <img url="/public/logo_ynov_campus_rvb_blanc.jpg" alt="logo ynov">
+          </div>
+      </header>
+
       <div class="retour">
         <p>
           <a href="liste"> < Retour </a>
         </p>
       </div>
-      <a href="specialities.php"> Créer des themes<input type="button"></a>
+      <h1> Créer des themes</h1>
       <form class="" action="?createOffer" method="post">
           <div class="form-div1 form-div2">
                     <label class="form-label">Titre de l'offre</label>

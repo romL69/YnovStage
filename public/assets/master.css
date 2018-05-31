@@ -5,6 +5,13 @@
   font-family: "Montserrat";
   text-align: center;
 }
+header{
+  position: relative;
+  background-color:black;
+  height:auto;
+  top:0;
+  left:0;
+}
 a{
   text-decoration: none;
   color:inherit;
@@ -76,7 +83,7 @@ form{
   margin:5px;
   text-align: center;
   left: 5px;
-  top: 5px;
+  top: 20px;
   color:white;
   /*font-weight: bold;*/
   background-color:#e94e6d;
@@ -93,11 +100,13 @@ form{
     border-radius:5px;
 }
 .left{
+  margin:5px;
   border: 2px solid #23b2a4 ;
   border-radius: 10px;
   flex:auto;
 }
 .right{
+  margin:5px;
   border: 2px solid #23b2a4 ;
   border-radius: 10px;
   flex:10%;
@@ -118,6 +127,7 @@ p{
   padding-top: 50px;
   margin:15px;
   display:flex;
+
 }
 
 .title{
