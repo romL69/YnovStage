@@ -66,7 +66,7 @@ $teams = $connection->queryGetData("
           <a href="liste"> < Retour </a>
         </p>
       </div>
-      <h1> Créer des themes</h1>
+      <h1 class="admin_title"> Créer des themes</h1>
       <form class="" action="?createOffer" method="post">
           <div class="form-div1 form-div2">
                     <label class="form-label">Titre de l'offre</label>

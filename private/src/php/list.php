@@ -89,7 +89,7 @@ if (isset($_GET['recherche']))
             <a href="admin">  Page Admin </a>
           </p>
         </div>
-      <h1> Affinez votre recherche <br> pour trouvez le profil qui vous intéresse </h1>
+      <h1 class="list_title"> Affinez votre recherche <br> pour trouvez le profil qui vous intéresse </h1>
 
       <!-- formulaire de recherche --->
       <div class="form">
