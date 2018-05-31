@@ -112,7 +112,7 @@ $teams = $connection->queryGetData("
           </div>
           <div class="form-div1 form-div2">
                     <label class="form-label">Description</label>
-                    <textarea name="description" class="input"/></textarea>
+                    <textarea maxlength="500" name="description" class="input"/></textarea>
                 </div>
           <button type="submit" class="form_submit">CREER UNE OFFRE</button>
 

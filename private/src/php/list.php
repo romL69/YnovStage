@@ -161,6 +161,10 @@ if (isset($_GET['recherche']))
                 print "  -  ";
                 print $_POST['theme'];
             }
+            if (!isset($_POST['type']) && !isset($_POST['theme'])&& !isset($_POST['class']))
+            {
+                print " aucun";
+            }
         }
        ?>
 
