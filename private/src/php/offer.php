@@ -27,15 +27,14 @@ WHERE osi_offer_skill.offer_id='".$_GET['id']."'
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <title>Détails de l'offre</title>
     </head>
+
     <body>
       <div class="retour">
         <p>
           <a href="liste"> < Retour </a>
         </p>
       </div>
-
-
-        <div class="info_container">
+      <div class="info_container">
           <div class="left">
             <table>
               <tr>
