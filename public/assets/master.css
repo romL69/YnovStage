@@ -93,11 +93,13 @@ form{
     border-radius:5px;
 }
 .left{
+  margin:5px;
   border: 2px solid #23b2a4 ;
   border-radius: 10px;
   flex:auto;
 }
 .right{
+  margin:5px;
   border: 2px solid #23b2a4 ;
   border-radius: 10px;
   flex:10%;
@@ -118,6 +120,7 @@ p{
   padding-top: 50px;
   margin:15px;
   display:flex;
+
 }
 
 .title{
