@@ -179,7 +179,7 @@ if (isset($_GET['recherche']))
       <?php
             foreach ($teams as $team)
             {
-                $text=substr($team["description"], 14, 60);
+                $text=substr($team["description"], 14, 150);
                 $Parsedown = new Parsedown();
 
 
