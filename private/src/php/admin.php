@@ -66,35 +66,34 @@ $teams = $connection->queryGetData("
           <a href="liste"> < Retour </a>
         </p>
       </div>
-      <h1 class="admin_title"> Créer des themes</h1>
+      <h1 class="admin_title"> Créer des thèmes</h1>
       <form class="" action="?createOffer" method="post">
-          <div class="form-div1 form-div2">
-                    <label class="form-label">Titre de l'offre</label>
-                    <input type="text" name="title" class="input"/>
-                </div>
-                <div class="form_type">
-                  <label for="inputType">Type</label>
-                  <select id="inputType" class="form_type" name="type">
-                    <option selected>Stage</option>
-                    <option>Alternance</option>
-                    <option> CDD </option>
-                    <option> CDI </option>
-                  </select>
-                </div>
-          <div class="form_type">
-            <label for="inputType">Classe</label>
-            <select id="inputType" class="form_type" name="class">
-              <option selected>Ingesup</option>
-              <option>Digital Business School</option>
-              <option> Animation 3D / Jeux vidéo </option>
-              <option> Web, com & graphic design</option>
-              <option> Audiovisuel </option>
-
-            </select>
+          <div class="form_title">
+              <label class="inputTitle">Titre de l'offre</label>
+              <input type="text" name="inputTitle" class="input"/>
           </div>
           <div class="form_type">
-            <label for="inputType">Thématique</label>
-            <select id="inputType" class="form_type" name="theme">
+              <label for="inputType">Type</label>
+              <select id="inputType" class="form_type" name="type">
+                  <option selected>Stage</option>
+                  <option>Alternance</option>
+                  <option> CDD </option>
+                  <option> CDI </option>
+              </select>
+          </div>
+          <div class="form_type">
+              <label for="inputType">Classe</label>
+              <select id="inputType" class="form_type" name="class">
+                <option selected>Ingesup</option>
+                <option>Digital Business School</option>
+                <option> Animation 3D / Jeux vidéo </option>
+                <option> Web, com & graphic design</option>
+                <option> Audiovisuel </option>
+              </select>
+          </div>
+          <div class="form_type">
+              <label for="inputType">Thématique</label>
+              <select id="inputType" class="form_type" name="theme">
                 <?php
                   foreach ($themes as $theme)
               {
@@ -103,7 +102,7 @@ $teams = $connection->queryGetData("
                   print "\n";
                   ?>
 
-            </select>
+              </select>
           </div>
           <div class="form_type">
             <label for="inputType">Spécialité</label>
@@ -114,17 +113,16 @@ $teams = $connection->queryGetData("
               <option>Symfony</option>
               <option>Angular</option>
               <option>Node JS</option>
-
             </select>
           </div>
-          <div class="form-div1 form-div2">
-                    <label class="form-label">Periode</label>
-                    <input type="text" name="period" />
-                </div>
-          <div class="form-div1 form-div2">
-                    <label class="form-label">Description</label>
-                    <textarea maxlength="100000" name="description" class="input"/></textarea>
-                </div>
+          <div class="form_period">
+              <label for="inputPeriod">Période</label>
+              <input type="text" name="inputPeriod" />
+          </div>
+          <div class="form_descr">
+              <label for="inputDescription">Description</label>
+              <textarea maxlength="100000" name="inputDescription" class="input"/></textarea>
+          </div>
           <button type="submit" class="form_submit">CREER UNE OFFRE</button>
 
       </form>
@@ -135,7 +133,7 @@ $teams = $connection->queryGetData("
                     $Parsedown = new Parsedown();
                     print '<div class="offer">
                        <div class="title">
-                         <h4>'.$team["title"].'</h4>
+                         <h2>'.$team["title"].'</h2>
                        </div>
                        <div class="type">
                          '.$team["type"].'
