@@ -135,7 +135,7 @@ $teams = $connection->queryGetData("
                     $Parsedown = new Parsedown();
                     print '<div class="offer">
                        <div class="title">
-                         <h4>'.$team["title"].'</h4>
+                         <h2>'.$team["title"].'</h2>
                        </div>
                        <div class="type">
                          '.$team["type"].'
