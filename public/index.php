@@ -24,6 +24,10 @@ if(strstr($_SERVER["REQUEST_URI"], "/offer") )
   {
 require '..\private\src\php\offer.php';
 }
+if(strstr($_SERVER["REQUEST_URI"], "/sitemap") )
+  {
+require '../sitemap.php';
+}
 /*
 <?php
 // Grabs the URI and breaks it apart in case we have querystring stuff

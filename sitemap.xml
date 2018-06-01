@@ -1,0 +1,22 @@
+ <?xml version="1.0" encoding="UTF_8"?>
+
+
+	<url>
+		<loc>http://ynovstage/list</loc>
+	</url>
+	<url>
+		<loc>http://ynovstage/admin.php</loc>
+	</url>
+    <url>
+         		<loc>http://ynovstage/offer.php?id=53</loc>
+         	</url><url>
+         		<loc>http://ynovstage/offer.php?id=54</loc>
+         	</url><url>
+         		<loc>http://ynovstage/offer.php?id=62</loc>
+         	</url><url>
+         		<loc>http://ynovstage/offer.php?id=63</loc>
+         	</url><url>
+         		<loc>http://ynovstage/offer.php?id=65</loc>
+         	</url><url>
+         		<loc>http://ynovstage/offer.php?id=66</loc>
+         	</url></urlset>
