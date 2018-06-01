@@ -1,7 +1,6 @@
 <?php
 require_once 'func/connection.php';
 require_once (__DIR__.'/../../../vendor/autoload.php');
-
 $themes = $connection->queryGetData("
         SELECT title
         FROM osi_theme;
@@ -148,10 +147,10 @@ if (isset($_GET['search']))
         </form>
       </div>
       <?php
-      if (!isset($_GET['recherche'])) {
-          print 'Critères de recherche : aucun';
+      if (!isset($_GET['search'])) {
+          print 'Critère de recherche : aucun';
       }
-      if(isset($_GET['recherche']))
+      if(isset($_GET['search']))
         {
             print 'Critères de recherche : ';
             if (isset($_POST['type']))

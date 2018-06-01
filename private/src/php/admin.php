@@ -1,19 +1,8 @@
 <?php
-
-//parsedown pour les markdown
-//$Parsedown = new Parsedown();
-//echo $Parsedown->text('Hello _Parsedown_!'); # prints: <p>Hello <em>Parsedown</em>!</p>
-// you can also parse inline markdown only
-//echo $Parsedown->line('Hello _Parsedown_!'); # prints: Hello <em>Parsedown</em>!
-/*
-//parsedown pour les markdown (DONE)
-$to_show = $_GET['description'];
-$Parsedown = new Parsedown();
-echo $Parsedown->text($to_show);
-*/
 require_once (__DIR__.'/../../../vendor/autoload.php');
+if (isset($_POST['username']) && isset($_POST['password']) && $_POST['username']=="admin-ynov" && $_POST['password']=="secret-ynov")
+{
 
-require_once 'func/connection.php';
 $themes = $connection->queryGetData("
         SELECT title
         FROM osi_theme;
@@ -44,9 +33,9 @@ $teams = $connection->queryGetData("
             ");
             header('Location: admin.php');
         }
- ?>
 
-<!DOCTYPE html>
+
+print'<!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -55,7 +44,7 @@ $teams = $connection->queryGetData("
   </head>
   <body>
 
-    
+
 
       <div class="retour">
         <p>
@@ -65,7 +54,7 @@ $teams = $connection->queryGetData("
       <h1 class="admin_title"> Créer des thèmes</h1>
       <form class="" action="?createOffer" method="post">
           <div class="form_title">
-              <label for="title">Titre de l'offre</label>
+              <label for="title">Titre de l\'offre</label>
               <input type="text" name="title" class="input"/>
           </div>
           <div class="form_type">
@@ -90,13 +79,13 @@ $teams = $connection->queryGetData("
           <div class="form_type">
               <label for="inputType">Thématique</label>
               <select id="inputType" class="form_type" name="theme">
-                <?php
+
                   foreach ($themes as $theme)
               {
-                  print '<option value="' . $theme['title'].'">' . $theme['title'] . '</option>' . "\n                                ";
+                   \'<option value="\' . $theme[\'title\'].\'">\' . $theme[\'title\'] . \'</option>\' . "\n               ";
                       }
-                  print "\n";
-                  ?>
+                   "\n";
+
 
               </select>
           </div>
@@ -123,28 +112,35 @@ $teams = $connection->queryGetData("
 
       </form>
       <div class="">
-          <?php
+
                 foreach ($teams as $team)
                 {
                     $Parsedown = new Parsedown();
-                    print '<div class="offer">
+                     \'<div class="offer">
                        <div class="title">
-                         <h2>'.$team["title"].'</h2>
+                         <h2>\'.$team["title"].\'</h2>
                        </div>
                        <div class="type">
-                         '.$team["type"].'
+                         \'.$team["type"].\'
                        </div>
                        <div class="classe">
-                         '.$team["class"].'
+                         \'.$team["class"].\'
                        </div>
                        <div class="description">
-                           '.$Parsedown->text($team["description"]).'
+                           \'.$Parsedown->text($team["description"]).\'
                        </div>
-                       <a class="delete" href="?delete='.$team["id"].'"> Supprimer l\'offre </a>
-                    </div>'
+                       <a class="delete" href="?delete=\'.$team["id"].\'"> Supprimer l\'offre </a>
+                    </div>\'
                 ;}
                 print "\n";
-            ?>
+
       </div>
   </body>
-</html>
+</html>';
+}
+else
+{
+print'nom utilisateur ou mot de passe incorrect';
+
+}
+?>
