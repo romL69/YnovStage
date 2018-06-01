@@ -10,14 +10,14 @@ $skills= $connection->queryGetData("
         SELECT title,id
         FROM osi_skill
         ");
-if (!isset($_GET['recherche']))
+if (!isset($_GET['search']))
 {
 $teams = $connection->queryGetData("
         SELECT title, type, class, description,id
         FROM osi_offer;
         ");
     }
-if (isset($_GET['recherche']))
+if (isset($_GET['search']))
 {
     if ($_POST['type']==='') {
         $_POST['type']=null;
@@ -89,7 +89,7 @@ if (isset($_GET['recherche']))
 
       <!-- formulaire de recherche --->
       <div class="form">
-        <form class="formulaire" action="?recherche" method="POST">
+        <form class="formulaire_search" action="?search" method="POST">
           <h3> Sélectionnez vos critères de recherche </h3>
 
             <div class="form_type">

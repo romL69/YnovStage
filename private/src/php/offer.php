@@ -39,7 +39,6 @@ WHERE osi_offer_skill.offer_id='".$_GET['id']."'
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'GA_TRACKING_ID');
         </script>
     </head>
@@ -94,17 +93,14 @@ WHERE osi_offer_skill.offer_id='".$_GET['id']."'
                 </div>
             </div>
         </div>
-
+        <?php
+        if (isset($_POST['frm_mail'])) {
+            echo "<div class=\"alert alert-warn\">";
+            echo "<p>Le mail a bien été envoyé !</p>";
+            echo "</div>";        }
+         ?>
         <form class="form_fields" action="" method="POST">
               <legend class="title_contact">Nous contacter à propos de ce profil</legend>
-              <!--<input type="hidden" name="frm_action" value="create" />
-              <input type="hidden" name="form_id" value="2" />
-              <input type="hidden" name="frm_hide_fields_2" id="frm_hide_fields_2" value="" />
-              <input type="hidden" name="form_key" value="contact-form" />
-              <input type="hidden" name="item_meta[0]" value="" />
-              <input type="hidden" id="frm_submit_entry_2" name="frm_submit_entry_2" value="346e32339b" />
-              <input type="hidden" name="_wp_http_referer" value="/fr/nous-contacter/" />
-              <input type="text" class="frm_hidden frm_verify" id="frm_verify_2" name="frm_verify" value=""  />------->
               <div class="civility">
                 <label for="frm_civility">Civilité<span class="needed">*</span></label>
                 <select name="frm_civility" data-frmval="Monsieur" data-reqmsg="Ce champ ne peut pas être vide">
@@ -142,7 +138,7 @@ WHERE osi_offer_skill.offer_id='".$_GET['id']."'
 
     <?php
         //SWIFT MAILER
-        if(isset($_GET["send"])){
+        if(isset($_POST['frm_mail'])){
             $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
                 ->setUsername('ynovStageInge@gmail.com')
                 ->setPassword('Pouloulou869');
@@ -157,7 +153,6 @@ WHERE osi_offer_skill.offer_id='".$_GET['id']."'
             ;
             $result = $mailer->send($message);
         }
-
     ?>
     </body>
 </html>
