@@ -144,16 +144,16 @@ WHERE osi_offer_skill.offer_id='".$_GET['id']."'
         //SWIFT MAILER
         if(isset($_GET["send"])){
             $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
-                ->setUsername('jeux.ou.il.faut.sinscrire@gmail.com ')
-                ->setPassword('jeuxdefou');
+                ->setUsername('ynovStageInge@gmail.com')
+                ->setPassword('Pouloulou869');
 
             $mailer = new Swift_Mailer($transport);
 
-            $message = (new Swift_Message('Renseignements à propos d\'un profil'))
-                    ->setFrom(['test-stage@ynov.com' => 'Offre Stage'])
-                    ->setTo([$_POST['frm_mail'] => $_POST['frm_surname']." ".$_POST['frm_name']])
+            $message = (new Swift_Message("Renseignements à propos d\'un profil : '".$offre[0]["title"]."'"))
+                    ->setFrom([$_POST['frm_mail'] => $_POST['frm_surname']." ".$_POST['frm_name']])
+                    ->setTo(['ynovStageInge@gmail.com' => 'Offre Stage'])
                     ->setBody($_POST['frm_message']."\n"."\n".$_POST['frm_civility']." ".$_POST['frm_name']." ".$_POST['frm_surname']."\n".
-                        'Mail : '.$_POST['frm_mail']." | Téléphone : ".$_POST['frm_tel'])
+                        'Mail : '.$_POST['frm_mail']." | Téléphone : ".$_POST['frm_mobile'])
             ;
             $result = $mailer->send($message);
         }
