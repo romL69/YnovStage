@@ -12,6 +12,8 @@
           <a href="liste"> < Retour </a>
         </p>
       </div>
+      <a class="delete" href="func/setDB.php"> Gestion DB </a>
+
       <h1 class="admin_title"> Créer des thèmes</h1>
       <form class="" action="?createOffer" method="post">
           <div class="form_title">

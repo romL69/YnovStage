@@ -4,13 +4,13 @@ class SQL
 {
     private $PDO = null;
 
-    function __construct(string $DB, string $user, string $pass)
+    function __construct()
     {
-        $dsn = 'mysql:dbname=' . $DB . ';host=localhost';
-        $user = $user;
-        $password = $pass;
+        $dsn = 'mysql:dbname=ynovstage;host=localhost';
+        $user = 'root';
+        $password = '';
         $this->PDO = new PDO($dsn, $user, $password);
-
+        
 
     }
 
