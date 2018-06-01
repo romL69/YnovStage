@@ -8,7 +8,7 @@ require_once '..\private\src\php\list.php';
 }
 elseif(strstr($_SERVER["REQUEST_URI"], "/login") )
   {
-require '..\private\src\php\password.php';
+require '..\private\src\php\login.php';
 }
 elseif(strstr($_SERVER["REQUEST_URI"], "/admin") )
   {

@@ -15,7 +15,7 @@
               </div>
               <div class="form_period">
                   <label for="period">Mot de passe</label>
-                  <input type="text" name="password" />
+                  <input type="password" name="password" />
               </div>
               <button type="submit" class="form_submit">Connection</button>
           </form>

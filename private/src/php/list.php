@@ -81,7 +81,7 @@ if (isset($_GET['search']))
 
         <div class="retour">
           <p>
-            <a href="admin">  Page Admin </a>
+            <a href="login">  Page Admin </a>
           </p>
         </div>
       <h1 class="list_title"> Affinez votre recherche <br> pour trouver le profil qui vous intéresse </h1>
