@@ -4,10 +4,10 @@
 ## Lancement du projet
 
     Afin de permettre au projet de fonctionner, lancer le contenu du fichier setDB.SQL dans PhpMyAdmin pour créer la base de données. Le nom de la base est ynovstage.
-
+    ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 ## Utilisation
 
-    
+
 ## Google Analytics
 
     Il faut créer une propriété dans Google Analytics. Pour cela il faut se connecter sur Google Analytics. Lors de la création de la propriété il faut faire attention à l'URL de notre site, s'il n'est pas valide la propriété ne pourra pas être créée, ainsi qu'à la génération de l'ID de suivi, un ID = un site.
