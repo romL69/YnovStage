@@ -4,7 +4,6 @@
 ## Lancement du projet
 
     Afin de permettre au projet de fonctionner, lancer le contenu du fichier setDB.SQL dans PhpMyAdmin pour créer la base de données. Le nom de la base est ynovstage.
-    ![alt text]("C:\wamp64\www\YnovStage\public\assets\logo_ynov_campus_rvb_blanc.jpg")
 ## Utilisation
 
 
