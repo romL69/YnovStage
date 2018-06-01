@@ -4,8 +4,15 @@
 ## Lancement du projet
 
     Afin de permettre au projet de fonctionner, lancer le contenu du fichier setDB.SQL dans PhpMyAdmin pour créer la base de données. Le nom de la base est ynovstage.
+    Le projet nécessite également l'installation de Swiftmailer et de Parsedown, qu'il faut installer à l'aide de composer
+
 ## Utilisation
 
+    -Page liste : affiche les différents profils disponibles, permet un filtrage des offres selon différents Critères
+
+    -Page offre : détaille les caractéristiques d'une offre et propose un formulaire de contact qui permet d'envoyer un mail a une adresse prédéfinie
+
+    -Page administration : permet de créer et supprimer des offres,
 
 ## Google Analytics
 
