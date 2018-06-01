@@ -22,10 +22,6 @@ elseif(strstr($_SERVER["REQUEST_URI"], "/offer") )
   {
 require '..\private\src\php\offer.php';
 }
-elseif(strstr($_SERVER["REQUEST_URI"], "/sitemap") )
-  {
-require '../sitemap.php';
-}
 else {
     require_once '..\private\src\php\list.php';
 }
